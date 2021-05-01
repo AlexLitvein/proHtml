@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Shop</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header_controls">
+                    <a class="header__logo" href="./index.html"><img src="./img/logo.png" alt="logo" width="44" height="38"></a>
+                    <img src="./img/loupe.svg" alt="loupe" width="26" height="27">
+                </div>
+                <div class="header_controls">
+                    <button class="header__button-menu" type="button">
+                        <img src="./img/menu.svg" alt="" width="32" height="23">
+                    </button>
+                    <a class="header__person-link" href="#"><img src="./img/user.svg" alt="user"></a>
+                    <a class="header__basket" href="#"><img src="./img/basket.svg" alt="basket"></a>
+                </div>
+            </div>
+        </div>
+        <nav class="header__navigation">
+            <!-- <div class="header__navigation-button-close-wrapper"> -->
+            <img class="header__navigation-button-close" src="./img/close.svg" alt="close">
+            <!-- </div> -->
+
+            <h2 class="header__navigation-tittle">menu</h2>
+            <ul class="header__navigation-list">
+                <li>
+                    <h3 class="header__navigation-item-tittle">man</h3>
+                    <ul>
+                        <li class="header__navigation-item">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags</a>
+                            <a href="#">Denim</a>
+                            <a href="#">T-Shirts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="header__navigation-item-tittle">woman</h3>
+                    <ul>
+                        <li class="header__navigation-item">
+                            <a href="#">Accessories</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Polos</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Shirts</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="header__navigation-item-tittle">kids</h3>
+                    <ul>
+                        <li class="header__navigation-item">
+                            <a href="#">Accessories</a>
+                            <a href="#">Jackets & Coats</a>
+                            <a href="#">Polos</a>
+                            <a href="#">T-Shirts</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Bags</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="container">
+            <section class="reg__tittle">
+                <h1 class="reg__tittle-text">registration</h1>
+            </section>
+            <section class="regCont">
+                <form class="regCont__form" action="endpoint">
+                    <p class="regCont__form-tittle">Your Name</p>
+                    <input class="regCont__form-input" type="text" placeholder="First Name" required>
+                    <input class="regCont__form-input" type="text" placeholder="Last Name" required>
+                    <p class="regCont__form-gender"><input type="radio" name="Male" id="">Male</p>
+                    <p class="regCont__form-gender"><input type="radio" name="Male" id="">Female</p>
+
+                    <p class="regCont__form-tittle">Login details</p>
+                    <input class="regCont__form-input" type="email" placeholder="Email" required>
+                    <input class="regCont__form-input" type="password" placeholder="Password" required>
+                    <p class="regCont__form-tips">Please use 8 or more characters, with at least 1 number and a mixture
+                        of
+                        uppercase
+                        and lowercase letters</p>
+                    <button class="regCont__form-button" type="submit">
+                        join now
+                        <img src="./img/arrow.png" alt="arrow">
+                        </img>
+                    </button>
+
+                </form>
+                <div class="regCont__offers">
+                    <p class="regCont__offers-tittle">loyalty has its perks</p>
+                    <p class="regCont__offers-text">Get in on the loyalty program where you can earn points and unlock
+                        serious
+                        perks. Starting with these as soon as you join:</p>
+                    <ul class="regCont__offers-list">
+                        <li class="regCont__offers-item">15% off welcome offer</li>
+                        <li class="regCont__offers-item">Free shipping, returns and exchanges on all orders</li>
+                        <li class="regCont__offers-item">$10 off a purchase on your birthday</li>
+                        <li class="regCont__offers-item">Early access to products</li>
+                        <li class="regCont__offers-item">Exclusive offers & rewards</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="subscribe">
+            <h2 class="visually-hidden">subscribe</h2>
+            <div class="subscribe__slogan">
+                <img src="./img/director.png" alt="director">
+                <p class="subscribe__slogan-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
+                        class="subscribe__slogan-subtext">a pulvinar purus condimentum“</span></p>
+            </div>
+            <form class="subscribe__form" action="endpoint">
+                <h2 class="subscribe__form-tittle">Subscribe</h2>
+                <p class="subscribe__form-subtittle">for our newletter and promotion</p>
+                <input class="subscribe__form-input" type="email" placeholder="Enter Your Email" required>
+                <button class="subscribe__form-button" type="submit">Subscribe</button>
+            </form>
+        </div>
+        <div class=" copyright">
+            <h2 class="visually-hidden">copy right</h2>
+            <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
+            <ul class="copyright__social-list">
+                <li class="copyright__social-item"><a href="#"><img src="./img/facebook.svg" alt="facebook"></a></li>
+                <li class="copyright__social-item"><a href="#"><img src="./img/whatsapp.svg" alt="whatsapp"></a></li>
+                <li class="copyright__social-item"><a href="#"><img src="./img/pinterest.svg" alt="pinterest"></a></li>
+                <li class="copyright__social-item"><a href="#"><img src="./img/twitter.svg" alt="twitter"></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        const prods = document.querySelectorAll('.product__item-image-wrapper');
+        prods.forEach(function (prod) {
+            prod.addEventListener('mouseenter', function (e) {
+                const buttn = e.target.querySelector('.product__item-button');
+                const img = e.target.querySelector('.product__item-image');
+                buttn.style.display = 'flex';
+                img.style.opacity = '0.5';
+            }, false);
+
+            prod.addEventListener('mouseleave', function (e) {
+                const buttn = e.target.querySelector('.product__item-button');
+                const img = e.target.querySelector('.product__item-image');
+                buttn.style.display = 'none';
+                img.style.opacity = '1.0';
+            }, false);
+        });
+
+        const menuBttn = document.querySelector('.header__button-menu');
+        const menu = document.querySelector('.header__navigation');
+        const bttnClose = document.querySelector('.header__navigation-button-close');
+
+        menuBttn.addEventListener('click', function (e) {
+            menu.style.display = 'block';
+        }, false);
+
+        bttnClose.addEventListener('click', function (e) {
+            menu.style.display = 'none';
+        }, false);
+
+    </script>
+</body>
+
+</html>
