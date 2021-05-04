@@ -1,0 +1,40 @@
+.brand {
+    display: flex;
+    margin: 0 0 63px 0;
+    background-color: $pink;
+
+    &__tittle-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        // align-items: center;
+        justify-content: center;
+        padding-left: 90px;
+      }
+      
+      &__tittle {
+        // margin: 0 0 0 91px;
+        position: relative;
+        color: $dark-blue;
+        @include font(48px, 58px, 900, 1);
+      }
+      
+      &__tittle::before {
+        position: absolute;
+        content: '';
+        width: 12px;
+        height: 2.0em;
+        background-color: $dark-pink;
+        top: 0;
+        left: -26px;
+      }
+      
+      &__subtittle {
+        @include font(32px, 38px, 700, 1);
+      }
+      
+      &__subtittle-color {
+        color: $dark-pink;
+      }
+  }  
+  

@@ -1,0 +1,50 @@
+body {
+    font-family: Lato;
+    @include font();
+    // font-size: 16px;
+    // font-style: normal;
+    // font-weight: 400;
+    // line-height: 19px;  
+
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+  }
+
+  .container {
+    width: 1140px;
+    margin: 0 auto;
+  }
+
+  // .button-control {
+  //   background-color: $dark-pink;
+  //   border: none; 
+  //   color: white;
+  //   cursor: pointer;
+  // }
+
+  // .button-control:hover {  
+  //   background-color: $darker-pink;
+  // }
+
+  // .link-control {
+  //   border: $dark-pink 1px solid;
+  //   color: $dark-pink;
+  //   @include font(16px, 47px, 400);
+  //   text-decoration: none;
+  //   text-align: center;
+  //   display: block;
+  // }
+
+  // .link-control:hover {
+  //   background-color: $darker-pink;
+  //   color: white;
+  // }

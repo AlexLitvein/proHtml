@@ -1,0 +1,9 @@
+@mixin font ($sz: 14px, $h: 17px, $w: 400, $bUpp: 0) {
+    font-size: $sz;
+    line-height: $h;
+    font-weight: $w;
+    // font-style: $stl;
+    @if $bUpp > 0 {
+        text-transform: uppercase;
+    }
+}

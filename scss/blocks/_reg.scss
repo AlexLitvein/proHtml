@@ -1,0 +1,99 @@
+.reg {
+
+  &__content {
+    display: flex;
+  }
+
+&__tittle {
+    height: 148px;
+    background-color: $light-pink;
+    margin: 0 0 64px 0;
+  }
+  
+  &__tittle-text {
+    @include font(24px, 148px, 400, 1);
+    color: $dark-pink;
+  }
+  
+  
+  &__form {
+    margin: 0 128px 0 0;
+  }
+  
+  &__form-tittle {
+    color: $dark-blue;
+    @include font(16px, 19px, 300);
+  }
+  
+  &__form-input {
+    display: block;
+    width: 360px;
+    height: 46px;
+    margin-top: 20px;
+    padding-left: 17px;
+    font-family: Lato;
+  }
+  
+  &__form-input::placeholder {  
+    color: $gray;
+    @include font(13px, 46px, 300);
+    font-family: Lato;
+  }
+  
+  &__form-gender {
+    display: inline-block;
+    margin: 32px 17px 32px 0;
+    @include font(11px, 13px, 300);
+  }
+  
+  &__form-tips {
+    @include font(13px, 16px, 300);
+    margin: 15px 0 0 0;
+    color: $gray;
+  }
+  
+  &__form-button {
+    margin: 40px 0 96px 0;
+    width: 167px;
+    height: 50px;
+    background-color: $dark-pink;
+    border: none;  
+    @include font(14px, 17px, 400, 1);
+    font-family: Lato;
+    color: white;
+    cursor: pointer;
+  }
+  
+  &__form-button:hover {  
+    background-color: $darker-pink;
+  }
+  
+  &__offers-tittle {
+    color: black;
+    
+    @include font(24px, 29px, 300, 1);
+  }
+  
+  &__offers-text {
+    @include font(24px, 29px, 300);
+    color: black;
+    margin: 22px 0 22px 0;
+  }
+  
+  &__offers-item {
+    @include font(24px, 29px, 300);
+    color: black;
+    margin: 0 0 16px 43px;
+    position: relative;
+  }
+  
+  &__offers-item::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -43px;
+    width: 20px;
+    height: 16px;
+    background-image: url(./../img/check-mark.png);
+  }
+}

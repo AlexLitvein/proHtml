@@ -1,0 +1,76 @@
+.subscribe {
+    display: flex;
+    justify-content: space-around;
+    background-image: url(./../img/photo-subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  
+  &__slogan {
+    text-align: center;
+    max-width: 360px;
+    margin: 87px 0 156px 0;
+  }
+  
+  &__form {
+    text-align: center;
+    max-width: 360px;
+    margin: 150px 0 156px 0;
+  }
+  
+  &__slogan-text {
+    @include font(20px, 24px);
+    margin-top: 40px;
+  }
+  &__slogan-subtext {
+    font-style: italic;
+  }
+  
+  &__form-tittle {
+    @include font(24px, 40px, 700, 1);
+    color: $dark-blue;
+  }
+  
+  &__form-subtittle {
+    @include font(18px, 30px, 400, 1);
+    color: $dark-blue;
+    margin-bottom: 32px;
+  }
+  
+  &__form-input {
+    border: none;
+    background-color: #E1E1E1;
+    color: $dark-blue;
+    height: 50px;
+    min-width: 234px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 0 0 0 22px;
+    font-family: Lato;
+    @include font(14px, 50px);
+  }
+
+  // &__form-input::placeholder {
+    
+  // }
+
+  &__form-button {    
+    min-width: 100px;
+    height: 50px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-left: -4px;
+    padding: 0;
+
+    border: none;
+    background-color: $dark-pink;
+    color: white;
+    cursor: pointer;
+    @include font(14px, 50px);
+    font-family: Lato;
+  }
+  
+  &__form-button:hover {
+    background-color: $darker-pink;
+  }
+}
