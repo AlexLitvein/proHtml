@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
                     <button class="header__button-menu" type="button">
                         <img src="./img/menu.svg" alt="" width="32" height="23">
                     </button>
-                    <a class="header__person-link" href="#"><img src="./img/user.svg" alt="user"></a>
-                    <a class="header__basket" href="./cart.html"><img src="./img/basket.svg" alt="basket"></a>
+                    <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
+                    <a class="header__basket" href="#"><img src="./img/basket.svg" alt="basket"></a>
                 </div>
             </div>
         </div>
@@ -77,45 +77,60 @@
         </nav>
 
     </header>
-    <main class="reg">
-        <section class="reg__tittle">
-            <h1 class="reg__tittle-text container">registration</h1>
+    <main>
+        <section class="cart__tittle">
+            <h1 class="cart__tittle-text container">shopping cart</h1>
         </section>
-        <section class="reg__content container">
-            <form class="reg__form" action="endpoint">
-                <p class="reg__form-tittle">Your Name</p>
-                <input class="reg__form-input" type="text" placeholder="First Name" required>
-                <input class="reg__form-input" type="text" placeholder="Last Name" required>
-                <p class="reg__form-gender"><input type="radio" name="Male" id="">Male</p>
-                <p class="reg__form-gender"><input type="radio" name="Male" id="">Female</p>
+        <section class="cart__content container">
+            <div class="cart__list-wrapper">
+                <ul class="cart__list">
+                    <li class="cart__item">                       
+                        <img class="cart__item-image" src="./img/prod-3.png" alt="prod" width="262" height="306">
+                        <div class="cart__item-description">
+                            <img class="cart__item-button-close" src="./img/close.svg" alt="close">
+                            <p class="cart__item-tittle">mango people<br>t-shirt</p>
+                            <p class="cart__item-price">Price: <span class="cart__item-price_color_pink">$300</span></p>
+                            <p class="cart__item-param">Color: Red<br>Size: XL<br>Quantity:<input class="cart__item-quantity" type="text" value="2"></input>
+                            </p>                           
+                        </div>
+                    </li>
+                    <li class="cart__item">                       
+                        <img class="cart__item-image" src="./img/prod-1.png" alt="prod" width="262" height="306">
+                        <div class="cart__item-description">
+                            <img class="cart__item-button-close" src="./img/close.svg" alt="close">
+                            <p class="cart__item-tittle">mango people<br>t-shirt</p>
+                            <p class="cart__item-price">Price: <span class="cart__item-price_color_pink">$300</span></p>
+                            <p class="cart__item-param">Color: Red<br>Size: XL<br>Quantity:<input class="cart__item-quantity" type="text" value="2"></input>
+                            </p>                           
+                        </div>
+                    </li>
 
-                <p class="reg__form-tittle">Login details</p>
-                <input class="reg__form-input" type="email" placeholder="Email" required>
-                <input class="reg__form-input" type="password" placeholder="Password" required>
-                <p class="reg__form-tips">Please use 8 or more characters, with at least 1 number and a mixture
-                    of
-                    uppercase
-                    and lowercase letters</p>
-                <button class="reg__form-button button-control" type="submit">
-                    join now
-                    <img src="./img/arrow.png" alt="arrow">
-                    </img>
-                </button>
-
-            </form>
-            <div class="reg__offers">
-                <p class="reg__offers-tittle">loyalty has its perks</p>
-                <p class="reg__offers-text">Get in on the loyalty program where you can earn points and unlock
-                    serious
-                    perks. Starting with these as soon as you join:</p>
-                <ul class="reg__offers-list">
-                    <li class="reg__offers-item">15% off welcome offer</li>
-                    <li class="reg__offers-item">Free shipping, returns and exchanges on all orders</li>
-                    <li class="reg__offers-item">$10 off a purchase on your birthday</li>
-                    <li class="reg__offers-item">Early access to products</li>
-                    <li class="reg__offers-item">Exclusive offers & rewards</li>
                 </ul>
+                <div class="cart__control-wrapper">
+                    <button class="cart__button-clear cart__button">clear shopping cart</button>
+                    <a class="cart__button-continue cart__button" href="#">continue shopping</a>
+                </div>
             </div>
+
+            <div class="cart__form-wrapper">
+                <form class="cart__form" action="endpoint">
+                    <p class="cart__form-tittle">shipping adress</p>
+                    <input class="cart__form-input" type="text" placeholder="Bangladesh" required>
+                    <input class="cart__form-input" type="text" placeholder="State" required>
+                    <input class="cart__form-input" type="text" placeholder="Postcode / Zip" required>
+                    <button class="cart__form-button cart__button" type="button">get a quote</button>
+
+                </form>
+
+                <div class="cart__proceed-wrapper">
+                    <p class="cart__proceed-sub">sub total<span class="cart__proceed-cashSub">$900</span></p>
+                    <p class="cart__proceed-total">grand total<span class="cart__proceed-cashTotal">$900</span></p>
+                    <hr class="cart__proceed-hline">
+                    <button class="cart__proceed-button" type="button">proceed to checkout</button>
+                </div>
+            </div>
+
+
         </section>
     </main>
     <footer>
@@ -130,7 +145,7 @@
                 <h2 class="subscribe__form-tittle">Subscribe</h2>
                 <p class="subscribe__form-subtittle">for our newletter and promotion</p>
                 <input class="subscribe__form-input" type="email" placeholder="Enter Your Email" required>
-                <button class="subscribe__form-button " type="submit">Subscribe</button>
+                <button class="subscribe__form-button button-control" type="submit">Subscribe</button>
             </form>
         </div>
         <div class=" copyright">

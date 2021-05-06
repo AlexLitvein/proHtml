@@ -1,0 +1,186 @@
+.cart {
+    &__tittle {
+        height: 148px;
+        background-color: $light-pink;
+        margin: 0 0 96px 0;
+    }
+
+    &__tittle-text {
+        @include font(24px, 148px, 400, 1);
+        color: $dark-pink;
+    }
+    &__content {
+        display: flex;
+    }
+
+    // &__list-wrapper {
+        
+    // }
+    // &__list {
+
+    // }
+
+    &__item {
+        display: flex;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        margin: 0 24px 40px 0;
+    }
+    
+    // &__item-image {
+        
+    // }
+    &__item-description {
+        width: 390px;
+        height: 284px;
+        margin: 22px 0 0 31px;
+    }
+
+    &__item-button-close {
+        float: right;
+        margin-right: 28px;
+    }
+
+    &__item-button-close:hover {
+        cursor: pointer;
+        transform: translate(1px, 1px);
+      }
+
+    &__item-tittle {
+        @include font(24px, 29px, 400, 1);
+        color: $dark-blue;  
+    }
+
+    &__item-price {
+        margin-top: 32px; 
+        @include font(22px, 26px);
+        color: $item-param_color;         
+    }
+
+    &__item-price_color_pink {
+        color: $dark-pink;
+    }
+
+    &__item-param {
+        @include font(22px, 32px); 
+        color: $item-param_color;  
+    }
+
+    &__item-quantity {
+        @include font(18px, 22px);
+        color: $item-param_color;
+        width: 43px;
+        margin-left: 24px;
+        text-align: center;
+        border: 1px solid $lighter-gray;
+    }
+
+    &__control-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 72px 0 128px 0;
+    }
+
+    &__button {
+        border: 1px solid $gray;
+        color: black;
+        background-color: white;
+        font-family: Lato;
+        @include font(14px, 17px, 300, 1);
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        cursor: pointer;
+    }
+    
+
+    &__button-clear {
+        width: 234px;
+        height: 49px;
+    }
+    &__button-continue {
+        width: 234px;
+        height: 49px;
+        line-height: 49px;  
+        margin-right: 24px;      
+    }
+    &__form-wrapper {
+        margin-left: 104px;
+    }
+    // &__form {
+    //    
+    // }
+    &__form-tittle {
+        @include font(16px, 19px, 300, 1);
+        color: $dark-blue;
+    }  
+
+    &__form-input {
+        display: block;        
+        width: 360px;
+        height: 45px;
+        margin-top: 20px;
+        padding-left: 17px;
+        border: 1px solid $gray;
+    }
+
+    &__form-input::placeholder {  
+        color: $dark-blue;
+        @include font(13px, 46px, 300);
+        font-family: Lato;
+        
+      }
+
+    &__form-button {
+        width: 100px;
+        height: 34px; 
+        @include font(11px, 12px, 300, 1); 
+        margin-top: 24px;
+        color: #4A4A4A; 
+    }
+    &__proceed-wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: $light-pink;
+        margin: 57px 0 0 0;
+        padding: 39px 42px 42px 42px;
+        text-align: right;
+    }
+    &__proceed-sub {
+        @include font(11px, 13px, 400, 1);
+        color: $dark-blue;
+    }
+    &__proceed-cashSub {
+        color: $dark-blue;
+        margin-left: 20px;
+    }
+    &__proceed-total {
+        @include font(16px, 19px, 300, 1);
+        margin: 12px 0 21px 0;
+        color: $dark-blue;
+    }
+    &__proceed-cashTotal {
+        color: $dark-pink;
+        margin-left: 20px;
+    }
+    &__proceed-hline {
+        width: 100%;
+        color: $lighter-gray;
+        opacity: 0.2;
+    }
+    &__proceed-button {
+        margin: 17px 0 0 0;
+        // width: 167px;
+        height: 50px;
+        background-color: $dark-pink;
+        border: none;  
+        @include font(16px, 19px, 300, 1);
+        font-family: Lato;
+        color: white;
+        cursor: pointer;
+    }
+
+    &__proceed-button:hover {
+        background-color: $darker-pink;
+    }
+    
+}

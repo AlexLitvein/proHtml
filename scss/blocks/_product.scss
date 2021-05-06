@@ -1,0 +1,84 @@
+.product {
+    margin-bottom: 95px;
+  
+  
+  &__tittle-wrapper {
+    text-align: center;
+    margin: 0 0 48px;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  &__item {  
+    width: 360px;
+  }
+  
+  &__item-image-wrapper {
+    position: relative; 
+    background-color: black;
+    line-height: 0;
+  }
+  
+  &__tittle {
+    @include font(30px, 36px);
+  }
+  
+  &__subtittle { 
+    color: #9F9F9F;  
+  }
+  
+  &__item-tittle {  
+    @include font(13px, 16px, 400, 1);
+    margin: 0 0 13px 0;
+  }
+  
+  &__item-description {
+    padding: 26px 28px 20px 16px;
+    margin: 0 0 30px 0;
+    background-color: $light-gray;
+  }
+  
+  &__item-price {
+    margin: 18px 0 0 0;
+    color: $dark-pink;
+    @include font(16px, 19px);
+  }
+  
+  &__item-button {
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+    background: none;  
+    border: white 1px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 138px;
+    height: 44px;  
+    color:white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  &__button-browse {    
+    width: 210px;
+    height: 47px;
+    margin: 18px auto 0;
+    border: $dark-pink 1px solid;
+    color: $dark-pink;
+    @include font(16px, 47px, 400);
+    text-decoration: none;
+    text-align: center;
+    display: block;
+  }
+  
+  &__button-browse:hover {
+    background-color: $darker-pink;
+    color: white;
+  }
+}

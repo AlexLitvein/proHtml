@@ -1,0 +1,93 @@
+.header {
+    background-color: $dark-blue;
+    position: relative;
+
+    &__navigation {
+        display:none ;
+        position: absolute;
+        background-color: white;
+        padding: 0 34px 0 34px;
+        width: 232px;
+        height: 764px;
+        right: 0;
+        top: 75px;
+      }
+      
+      &__navigation-button-close {
+        float: right;
+        margin-top: 16px;
+      }
+      
+      &__navigation-button-close:hover {
+        cursor: pointer;
+        transform: translate(1px, 1px);
+      }
+      
+      &__navigation-tittle {
+        margin: 37px 0 0 0;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      
+      &__navigation-item-tittle {
+        margin-top: 20px;
+        text-transform: uppercase;
+        color: $dark-pink;
+      }
+      
+      &__navigation-item {
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+      }
+      
+      &__navigation-item a {
+        color: $brown;
+        text-decoration: none;
+        margin-top: 11px;
+      }
+      
+      &__wrapper {
+        display: flex;
+        min-height: 75px;
+        align-items: center;
+        justify-content:space-between;
+      }
+      
+      &__button-menu {
+        border: none;
+        background-color: transparent;
+        margin: 0 34px 0 0;
+        cursor: pointer;
+      }
+      
+      &__button-menu:hover {
+        opacity: 0.5;
+      }
+      
+      &__logo {
+        margin: 0 41px 0 0;
+      }
+      
+      &__person-link {
+        margin: 0 34px 0 0;
+      }
+      
+      &__basket{
+        position: relative;
+      }
+      
+      &__basket::after{
+        content: '5';
+        position: absolute;
+        color: white;
+        text-align: center;
+        width: 19px;
+        height: 19px;
+        top: -20px;
+        right: -8px;
+        background-image: url(./../img/basket-circle.png);
+      }
+  }
+  
+  
