@@ -1,9 +1,20 @@
-.copyright {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 80px;
-    background-color: $dark-blue;
+.copyright {    
+
+  background-color: $dark-blue;
+
+    &__wrapper {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      min-height: 80px;
+      
+      @include media-add ($mobile-max-sz){
+        flex-direction: column;
+        flex-flow: column-reverse;
+        justify-content: space-around;
+        min-height: 143px;
+      }
+    }
   
   
   &__text {

@@ -16,8 +16,8 @@ prods.forEach(function (prod) {
 });
 
 const menuBttn = document.querySelector('.header__button-menu');
-const menu = document.querySelector('.header__navigation');
-const bttnClose = document.querySelector('.header__navigation-button-close');
+const menu = document.querySelector('.navigation');
+const bttnClose = document.querySelector('.navigation__button-close');
 
 menuBttn.addEventListener('click', function (e) {
     menu.style.display = 'block';

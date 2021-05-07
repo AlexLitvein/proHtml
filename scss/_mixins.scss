@@ -2,8 +2,13 @@
     font-size: $sz;
     line-height: $h;
     font-weight: $w;
-    // font-style: $stl;
-    @if $bUpp > 0 {
+    @if $bUpp != 0 {
         text-transform: uppercase;
+    }
+}
+
+@mixin media-add($size) {
+    @media (max-width: $size){
+        @content;
     }
 }

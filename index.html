@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -13,80 +13,72 @@
 
 <body>
     <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header_controls">
-                    <img class="header__logo" src="./img/logo.png" alt="logo" width="44" height="38">
-                    <img src="./img/loupe.svg" alt="loupe" width="26" height="27">
-                </div>
-                <div class="header_controls">
-                    <button class="header__button-menu" type="button">
-                        <img src="./img/menu.svg" alt="" width="32" height="23">
-                    </button>
-                    <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
-                    <a class="header__basket" href="./cart.html"><img src="./img/basket.svg" alt="basket"></a>
-                </div>
+        <div class="header__wrapper container">
+            <div class="header_controls">
+                <img class="header__logo" src="./img/logo.png" alt="logo" width="44" height="38">
+                <img src="./img/loupe.svg" alt="loupe" width="26" height="27">
+            </div>
+            <div class="header_controls">
+                <button class="header__button-menu" type="button">
+                    <img src="./img/menu.svg" alt="" width="32" height="23">
+                </button>
+                <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
+                <a class="header__basket" href="./cart.html"><img src="./img/basket.svg" alt="basket"></a>
             </div>
         </div>
-        <nav class="header__navigation">
-            <!-- <div class="header__navigation-button-close-wrapper"> -->
-            <img class="header__navigation-button-close" src="./img/close.svg" alt="close">
-            <!-- </div> -->
-
-            <h2 class="header__navigation-tittle">menu</h2>
-            <ul class="header__navigation-list">
-                <li>
-                    <h3 class="header__navigation-item-tittle">man</h3>
-                    <ul>
-                        <li class="header__navigation-item">
-                            <a href="#">Accessories</a>
-                            <a href="#">Bags</a>
-                            <a href="#">Denim</a>
-                            <a href="#">T-Shirts</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="header__navigation-item-tittle">woman</h3>
-                    <ul>
-                        <li class="header__navigation-item">
-                            <a href="#">Accessories</a>
-                            <a href="#">Jackets & Coats</a>
-                            <a href="#">Polos</a>
-                            <a href="#">T-Shirts</a>
-                            <a href="#">Shirts</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <h3 class="header__navigation-item-tittle">kids</h3>
-                    <ul>
-                        <li class="header__navigation-item">
-                            <a href="#">Accessories</a>
-                            <a href="#">Jackets & Coats</a>
-                            <a href="#">Polos</a>
-                            <a href="#">T-Shirts</a>
-                            <a href="#">Shirts</a>
-                            <a href="#">Bags</a>
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </nav>
-
     </header>
+    <nav class="navigation">
+        <img class="navigation__button-close" src="./img/close.svg" alt="close">
+        <h2 class="navigation__tittle">menu</h2>
+        <ul class="navigation__list">
+            <li>
+                <h3 class="navigation__item-tittle">man</h3>
+                <ul>
+                    <li class="navigation__item">
+                        <a href="#">Accessories</a>
+                        <a href="#">Bags</a>
+                        <a href="#">Denim</a>
+                        <a href="#">T-Shirts</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="navigation__item-tittle">woman</h3>
+                <ul>
+                    <li class="navigation__item">
+                        <a href="#">Accessories</a>
+                        <a href="#">Jackets & Coats</a>
+                        <a href="#">Polos</a>
+                        <a href="#">T-Shirts</a>
+                        <a href="#">Shirts</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h3 class="navigation__item-tittle">kids</h3>
+                <ul>
+                    <li class="navigation__item">
+                        <a href="#">Accessories</a>
+                        <a href="#">Jackets & Coats</a>
+                        <a href="#">Polos</a>
+                        <a href="#">T-Shirts</a>
+                        <a href="#">Shirts</a>
+                        <a href="#">Bags</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </nav>
     <main>
         <section class="brand">
-            <img src="./img/big-man.png" alt="big-man" width="800" height="765">
+            <img class="brand__image" src="./img/big-man.png" alt="big-man" width="800" height="765">
             <div class="brand__tittle-wrapper">
                 <p class="brand__tittle">the brand</p>
                 <p class="brand__subtittle">luxerious
                     <span class="brand__subtittle brand__subtittle-color">fashion</span>
                 </p>
             </div>
-            <!-- <h1 class="brand__tittle">the brand<br> <span class="brand__subtittle">luxerious <span
-                class="brand__subtittle brand__subtittle-color">fashion</span></span> </h1> -->
         </section>
         <section class="offers container">
             <h2 class="visually-hidden">Offers</h2>
@@ -257,14 +249,19 @@
             </form>
         </div>
         <div class=" copyright ">
-            <h2 class="visually-hidden">copy right</h2>
-            <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
-            <ul class="copyright__social-list">
-                <li class="copyright__social-item"><a href="#"><img src="./img/facebook.svg" alt="facebook"></a></li>
-                <li class="copyright__social-item"><a href="#"><img src="./img/whatsapp.svg" alt="whatsapp"></a></li>
-                <li class="copyright__social-item"><a href="#"><img src="./img/pinterest.svg" alt="pinterest"></a></li>
-                <li class="copyright__social-item"><a href="#"><img src="./img/twitter.svg" alt="twitter"></a></li>
-            </ul>
+            <div class="copyright__wrapper container">
+                <h2 class="visually-hidden">copy right</h2>
+                <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
+                <ul class="copyright__social-list">
+                    <li class="copyright__social-item"><a href="#"><img src="./img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li class="copyright__social-item"><a href="#"><img src="./img/whatsapp.svg" alt="whatsapp"></a>
+                    </li>
+                    <li class="copyright__social-item"><a href="#"><img src="./img/pinterest.svg" alt="pinterest"></a>
+                    </li>
+                    <li class="copyright__social-item"><a href="#"><img src="./img/twitter.svg" alt="twitter"></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
