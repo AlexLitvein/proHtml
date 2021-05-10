@@ -1,11 +1,6 @@
 body {
     font-family: Lato;
     @include font();
-    // font-size: 16px;
-    // font-style: normal;
-    // font-weight: 400;
-    // line-height: 19px;  
-
   }
   
   .visually-hidden {
@@ -20,31 +15,12 @@ body {
   }
 
   .container {
-    width: 1140px;
+    width: 71%;
     margin: 0 auto;
+
+    @include media-add($tablet-max-sz)
+    {
+      width: 95%;
+    }
   }
 
-  // .button-control {
-  //   background-color: $dark-pink;
-  //   border: none; 
-  //   color: white;
-  //   cursor: pointer;
-  // }
-
-  // .button-control:hover {  
-  //   background-color: $darker-pink;
-  // }
-
-  // .link-control {
-  //   border: $dark-pink 1px solid;
-  //   color: $dark-pink;
-  //   @include font(16px, 47px, 400);
-  //   text-decoration: none;
-  //   text-align: center;
-  //   display: block;
-  // }
-
-  // .link-control:hover {
-  //   background-color: $darker-pink;
-  //   color: white;
-  // }

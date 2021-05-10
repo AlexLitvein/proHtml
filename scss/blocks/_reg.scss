@@ -2,6 +2,9 @@
 
   &__content {
     display: flex;
+    @include media-add($mobile-max-sz){
+      flex-direction: column;
+    }
   }
 
 &__tittle {
@@ -13,11 +16,18 @@
   &__tittle-text {
     @include font(24px, 148px, 400, 1);
     color: $dark-pink;
+    @include media-add($mobile-max-sz){
+      text-align: center;
+    }
+   
   }
   
   
-  &__form {
+  &__form {   
     margin: 0 128px 0 0;
+    @include media-add($tablet-max-sz){
+      margin-right: 22px;
+    }
   }
   
   &__form-tittle {
@@ -27,6 +37,7 @@
   
   &__form-input {
     display: block;
+    box-sizing: border-box;
     width: 360px;
     height: 46px;
     margin-top: 20px;
@@ -54,6 +65,9 @@
   
   &__form-button {
     margin: 40px 0 96px 0;
+    @include media-add($mobile-max-sz){
+      margin-bottom: 40px;
+    }
     width: 167px;
     height: 50px;
     background-color: $dark-pink;
@@ -67,21 +81,34 @@
   &__form-button:hover {  
     background-color: $darker-pink;
   }
+
+  &__offers {
+    margin-bottom: 100px;
+  }
   
   &__offers-tittle {
     color: black;
     
     @include font(24px, 29px, 300, 1);
+    @include media-add($tablet-max-sz){
+      @include font(16px, 19px, 300, 1);
+    }
   }
   
   &__offers-text {
     @include font(24px, 29px, 300);
     color: black;
     margin: 22px 0 22px 0;
+    @include media-add($tablet-max-sz){
+      @include font(16px, 19px, 300);
+    }
   }
   
   &__offers-item {
     @include font(24px, 29px, 300);
+    @include media-add($tablet-max-sz){
+      @include font(16px, 19px, 300);
+    }
     color: black;
     margin: 0 0 16px 43px;
     position: relative;
@@ -90,7 +117,7 @@
   &__offers-item::before {
     content: '';
     position: absolute;
-    top: 8px;
+    top: 2px;
     left: -43px;
     width: 20px;
     height: 16px;

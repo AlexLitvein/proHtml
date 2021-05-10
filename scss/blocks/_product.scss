@@ -1,6 +1,5 @@
 .product {
-    margin-bottom: 95px;
-  
+    margin-bottom: 95px;  
   
   &__tittle-wrapper {
     text-align: center;
@@ -15,6 +14,7 @@
   
   &__item {  
     width: 360px;
+    margin: 0 auto;
   }
   
   &__item-image-wrapper {

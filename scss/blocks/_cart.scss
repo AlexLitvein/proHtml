@@ -3,41 +3,60 @@
         height: 148px;
         background-color: $light-pink;
         margin: 0 0 96px 0;
+        @include media-add($mobile-max-sz){
+            margin-bottom: 39px;           
+          }
     }
 
     &__tittle-text {
         @include font(24px, 148px, 400, 1);
         color: $dark-pink;
+        @include media-add($mobile-max-sz){
+            text-align: center;
+          }
     }
     &__content {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @include media-add($tablet-max-sz){
+            flex-direction: column;
+          }
     }
 
-    // &__list-wrapper {
-        
-    // }
+    &__list-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    
     // &__list {
-
     // }
 
     &__item {
+        width: 652px;
         display: flex;
         box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
         margin: 0 24px 40px 0;
+        @include media-add($mobile-max-sz){
+            width: 358px;           
+          }
     }
     
-    // &__item-image {
-        
-    // }
+    &__item-image {
+        @include media-add($mobile-max-sz){           
+            height: 188px;
+          }
+    }
     &__item-description {
-        width: 390px;
-        height: 284px;
-        margin: 22px 0 0 31px;
+        width: 100%;
+        padding: 22px 24px 0 31px;
+        @include media-add($mobile-max-sz){           
+            padding: 13px 17px 0 17px;
+          } 
     }
 
     &__item-button-close {
         float: right;
-        margin-right: 28px;
     }
 
     &__item-button-close:hover {
@@ -47,13 +66,20 @@
 
     &__item-tittle {
         @include font(24px, 29px, 400, 1);
-        color: $dark-blue;  
+        color: $dark-blue; 
+        @include media-add($mobile-max-sz){           
+            @include font(16px, 19px, 400, 1);
+          } 
     }
 
     &__item-price {
         margin-top: 32px; 
         @include font(22px, 26px);
-        color: $item-param_color;         
+        color: $item-param_color; 
+        @include media-add($mobile-max-sz){ 
+            margin-top: 25px;           
+            @include font(14px, 17px, 400);
+          }         
     }
 
     &__item-price_color_pink {
@@ -62,7 +88,10 @@
 
     &__item-param {
         @include font(22px, 32px); 
-        color: $item-param_color;  
+        color: $item-param_color; 
+        @include media-add($mobile-max-sz){           
+            @include font(14px, 17px, 400);
+          }  
     }
 
     &__item-quantity {
@@ -72,12 +101,21 @@
         margin-left: 24px;
         text-align: center;
         border: 1px solid $lighter-gray;
+        @include media-add($mobile-max-sz){           
+            @include font(14px, 17px, 400);
+          } 
     }
 
     &__control-wrapper {
         display: flex;
         justify-content: space-between;
-        margin: 72px 0 128px 0;
+        margin: 32px 0 128px 0;
+        @include media-add($tablet-max-sz){
+            margin-bottom: 64px;
+          }
+          @include media-add($mobile-max-sz){
+            margin: 0px 0 48px 0;        
+          }
     }
 
     &__button {
@@ -90,32 +128,59 @@
         text-align: center;
         display: block;
         cursor: pointer;
+        @include media-add($mobile-max-sz){
+            @include font(12px, 14px, 400); 
+            text-transform: none;    
+          }
     }
     
 
     &__button-clear {
         width: 234px;
         height: 49px;
+        @include media-add($mobile-max-sz){
+            width: 175px; 
+            height: 32px;          
+          }
     }
     &__button-continue {
         width: 234px;
         height: 49px;
-        line-height: 49px;  
-        margin-right: 24px;      
+        line-height: 32px;  
+        margin-right: 24px;  
+        @include media-add($mobile-max-sz){
+            width: 175px; 
+            height: 32px;           
+          }    
     }
     &__form-wrapper {
-        margin-left: 104px;
+        @include media-add($tablet-max-sz){
+            display: flex;
+          }
+        @include media-add($mobile-max-sz){
+            flex-direction: column;
+        }
     }
-    // &__form {
-    //    
-    // }
+
+    &__form {
+        margin: 0 10px 57px 0;
+        @include media-add($tablet-max-sz){
+            margin-bottom: 128px;
+          }
+
+        @include media-add($mobile-max-sz){
+        margin-bottom: 10px;
+        }
+    }
+
     &__form-tittle {
         @include font(16px, 19px, 300, 1);
         color: $dark-blue;
     }  
 
     &__form-input {
-        display: block;        
+        display: block;   
+        box-sizing: border-box;     
         width: 360px;
         height: 45px;
         margin-top: 20px;
@@ -139,9 +204,12 @@
     }
     &__proceed-wrapper {
         display: flex;
+        width: 360px;
+        height: 214px;
         flex-direction: column;
         background-color: $light-pink;
-        margin: 57px 0 0 0;
+        margin-top: 38px; 
+        margin-bottom: 96px;       
         padding: 39px 42px 42px 42px;
         text-align: right;
     }
@@ -169,7 +237,6 @@
     }
     &__proceed-button {
         margin: 17px 0 0 0;
-        // width: 167px;
         height: 50px;
         background-color: $dark-pink;
         border: none;  

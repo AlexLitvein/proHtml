@@ -3,21 +3,43 @@
     margin: 0 0 63px 0;
     background-color: $pink;
 
+    @include media-add($tablet-max-sz){
+      margin: 0 0 20px 0;
+    }
+
+    @include media-add ($mobile-max-sz){
+      min-height: 363px;
+    }
+
+    &__image {
+      width: 50%;
+      height: auto;
+      @include media-add ($mobile-max-sz){
+        display: none;
+      }
+    }
+
     &__tittle-wrapper {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        // align-items: center;
         justify-content: center;
         padding-left: 90px;
       }
       
-      &__tittle {
-        // margin: 0 0 0 91px;
-        position: relative;
-        color: $dark-blue;
-        @include font(48px, 58px, 900, 1);
+    &__tittle {
+      position: relative;
+      color: $dark-blue;
+      @include font(48px, 58px, 900, 1);
+
+      @include media-add($tablet-max-sz){
+        @include font(44px, 53px, 900, 1);
       }
+
+      @include media-add ($mobile-max-sz){
+        @include font(38px, 45px, 900, 1);
+      }
+    }
       
       &__tittle::before {
         position: absolute;
@@ -31,6 +53,9 @@
       
       &__subtittle {
         @include font(32px, 38px, 700, 1);
+        @include media-add($tablet-max-sz){
+          @include font(24px, 29px, 700, 1);
+        }
       }
       
       &__subtittle-color {
