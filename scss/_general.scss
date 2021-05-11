@@ -14,13 +14,8 @@ body {
     clip: rect(0 0 0 0)
   }
 
-  .container {
-    width: 71%;
+  .my-container {
+    max-width: $cont-width;
     margin: 0 auto;
-
-    @include media-add($tablet-max-sz)
-    {
-      width: 95%;
-    }
   }
 
