@@ -9,7 +9,7 @@
     }
 
     &__tittle-text {
-        @include font(24px, 148px, 400, 1);
+        @include font(24px, 29px, 400, 1);
         color: $dark-pink;
         @include media-add($mobile-max-sz){
             text-align: center;
@@ -21,6 +21,7 @@
         justify-content: center;
         @include media-add($tablet-max-sz){
             flex-direction: column;
+            align-items: center;
           }
     }
 
@@ -29,9 +30,6 @@
         flex-direction: column;
     }
     
-    // &__list {
-    // }
-
     &__item {
         width: 652px;
         display: flex;
@@ -137,20 +135,19 @@
 
     &__button-clear {
         width: 234px;
-        height: 49px;
+        line-height: 49px;
         @include media-add($mobile-max-sz){
             width: 175px; 
-            height: 32px;          
+            line-height: 32px;          
           }
     }
     &__button-continue {
         width: 234px;
-        height: 49px;
-        line-height: 32px;  
+        line-height: 49px;  
         margin-right: 24px;  
         @include media-add($mobile-max-sz){
             width: 175px; 
-            height: 32px;           
+            line-height: 32px;           
           }    
     }
     &__form-wrapper {
