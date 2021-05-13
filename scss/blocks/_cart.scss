@@ -10,6 +10,7 @@
 
     &__tittle-text {
         @include font(24px, 29px, 400, 1);
+        line-height: 148px;
         color: $dark-pink;
         @include media-add($mobile-max-sz){
             text-align: center;

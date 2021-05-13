@@ -43,6 +43,12 @@
     margin-top: 20px;
     padding-left: 17px;
     font-family: Lato;
+
+    transition: transform 0.725s ease;
+  }
+
+  &__form-input:focus {
+    transform: skew(-15deg) translate(10px);
   }
   
   &__form-input::placeholder {  
@@ -77,7 +83,7 @@
     color: white;
     cursor: pointer;
   }
-  
+ 
   &__form-button:hover {  
     background-color: $darker-pink;
   }

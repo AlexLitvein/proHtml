@@ -99,9 +99,32 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.my-container {
+.shop-container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+button-shadow-drop-center:hover {
+  -webkit-animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+  }
 }
 
 .header {
@@ -113,6 +136,11 @@ body {
   min-height: 75px;
   align-items: center;
   justify-content: space-between;
+}
+
+.header__controls {
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1140px) {
@@ -129,22 +157,93 @@ body {
   }
 }
 
+.header__loupe-link {
+  display: flex;
+  fill: #E8E8E8;
+}
+
+.header__loupe-link:hover {
+  fill: #f16d7f;
+}
+
+.header__loupe-svg:hover {
+  -webkit-animation: slide-fwd-center 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-fwd-center 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.header__loupe-link:focus-within > input {
+  width: 200px;
+  padding-left: 10px;
+}
+
+@-webkit-keyframes find-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+    padding-left: 10px;
+  }
+}
+
+@keyframes find-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+    padding-left: 10px;
+  }
+}
+
+.header__find {
+  height: 2rem;
+  margin-left: 16px;
+  width: 0px;
+  background-color: #f16d7f;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+  transition: width 500ms, padding-left 500ms;
+}
+
 .header__button-menu {
   border: none;
   background-color: transparent;
+  margin: 0 25px 0 0;
   cursor: pointer;
+  fill: #E8E8E8;
+  transition: fill 300ms;
 }
 
 .header__button-menu:hover {
-  opacity: 0.5;
-}
-
-.header__logo {
-  margin: 0 41px 0 0;
+  fill: #f16d7f;
 }
 
 .header__person-link {
-  margin: 0 42px 0 25px;
+  margin: 0 42px 0 0;
 }
 
 @media (max-width: 375px) {
@@ -170,7 +269,7 @@ body {
   text-align: center;
   width: 19px;
   height: 19px;
-  top: -20px;
+  top: -5px;
   right: -8px;
   background-image: url(./../img/basket-circle.png);
 }
@@ -374,6 +473,11 @@ body {
   justify-content: space-between;
 }
 
+.header__controls {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 1140px) {
   .header__controls {
     margin-left: 16px;
@@ -388,22 +492,72 @@ body {
   }
 }
 
+.header__loupe-link {
+  display: flex;
+  fill: #E8E8E8;
+}
+
+.header__loupe-link:hover {
+  fill: #f16d7f;
+}
+
+.header__loupe-svg:hover {
+  -webkit-animation: slide-fwd-center 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-fwd-center 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-fwd-center {
+  0% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+.header__loupe-link:focus-within > input {
+  width: 200px;
+  padding-left: 10px;
+}
+
+@keyframes find-grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 200px;
+    padding-left: 10px;
+  }
+}
+
+.header__find {
+  height: 2rem;
+  margin-left: 16px;
+  width: 0px;
+  background-color: #f16d7f;
+  border-radius: 6px;
+  border: none;
+  padding: 0;
+  transition: width 500ms, padding-left 500ms;
+}
+
 .header__button-menu {
   border: none;
   background-color: transparent;
+  margin: 0 25px 0 0;
   cursor: pointer;
+  fill: #E8E8E8;
+  transition: fill 300ms;
 }
 
 .header__button-menu:hover {
-  opacity: 0.5;
-}
-
-.header__logo {
-  margin: 0 41px 0 0;
+  fill: #f16d7f;
 }
 
 .header__person-link {
-  margin: 0 42px 0 25px;
+  margin: 0 42px 0 0;
 }
 
 @media (max-width: 375px) {
@@ -429,7 +583,7 @@ body {
   text-align: center;
   width: 19px;
   height: 19px;
-  top: -20px;
+  top: -5px;
   right: -8px;
   background-image: url(./../img/basket-circle.png);
 }
@@ -667,6 +821,14 @@ body {
   margin-top: 20px;
   padding-left: 17px;
   font-family: Lato;
+  transition: -webkit-transform 0.725s ease;
+  transition: transform 0.725s ease;
+  transition: transform 0.725s ease, -webkit-transform 0.725s ease;
+}
+
+.reg__form-input:focus {
+  -webkit-transform: skew(-15deg) translate(10px);
+          transform: skew(-15deg) translate(10px);
 }
 
 .reg__form-input::-webkit-input-placeholder {
@@ -977,6 +1139,7 @@ body {
   line-height: 29px;
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 148px;
   color: #f16d7f;
 }
 
