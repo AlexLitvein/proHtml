@@ -13,28 +13,36 @@
 
 <body>
     <header class="header">
-        <div class="header__wrapper my-container">
-            <div class="header_controls">
-                <a class="header__logo" href="./index.html"><img src="./img/logo.png" alt="logo" width="44"
-                        height="38"></a>
-                <img src="./img/loupe.svg" alt="loupe" width="26" height="27">
+        <div class="header__wrapper shop-container">
+            <div class="header__controls">
+                <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
+                        alt="logo"></a>
+                <a class="header__loupe-link" href="#">
+                    <!-- <img class="header__loupe" src="./img/loupe.svg" alt="loupe" > -->
+                    <svg class="header__loupe-svg" width="33" height="33" >
+                        <use xlink:href="./img/loupe.svg#loupe" ></use>
+                    </svg>
+                    <input class="header__find" type="search">
+                </a>
             </div>
-            <div class="header_controls">
+            <div class="header__controls">
                 <button class="header__button-menu" type="button">
-                    <img src="./img/menu.svg" alt="" width="32" height="23">
+                    <svg width="32" height="23">
+                        <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
+                    </svg>
                 </button>
-                <a class="header__person-link" href="#"><img src="./img/user.svg" alt="user"></a>
+                <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
                 <a class="header__basket" href="./cart.html"><img src="./img/basket.svg" alt="basket"></a>
             </div>
         </div>
     </header>
     <nav class="navigation">
         <img class="navigation__button-close" src="./img/close.svg" alt="close">
-        <h2 class="navigation__tittle">menu</h2>
         <ul class="navigation__list">
+            <h2 class="navigation__tittle">menu</h2>
             <li>
-                <h3 class="navigation__item-tittle">man</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">man</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Bags</a>
@@ -42,10 +50,8 @@
                         <a href="#">T-Shirts</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <h3 class="navigation__item-tittle">woman</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">woman</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Jackets & Coats</a>
@@ -54,10 +60,8 @@
                         <a href="#">Shirts</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <h3 class="navigation__item-tittle">kids</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">kids</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Jackets & Coats</a>
@@ -68,20 +72,20 @@
                     </li>
                 </ul>
             </li>
-
         </ul>
     </nav>
     <main class="reg">
         <section class="reg__tittle">
-            <h1 class="reg__tittle-text my-container">registration</h1>
+            <h1 class="reg__tittle-text shop-container">registration</h1>
         </section>
-        <section class="reg__content my-container">
+        <section class="reg__content shop-container">
+            <h2 class="visually-hidden">registration</h2>
             <form class="reg__form" action="endpoint">
                 <p class="reg__form-tittle">Your Name</p>
                 <input class="reg__form-input" type="text" placeholder="First Name" required>
                 <input class="reg__form-input" type="text" placeholder="Last Name" required>
-                <p class="reg__form-gender"><input type="radio" name="Male" id="">Male</p>
-                <p class="reg__form-gender"><input type="radio" name="Male" id="">Female</p>
+                <p class="reg__form-gender"><input type="radio" name="Male" id="reg-male">Male</p>
+                <p class="reg__form-gender"><input type="radio" name="Female" id="reg-female">Female</p>
 
                 <p class="reg__form-tittle">Login details</p>
                 <input class="reg__form-input" type="email" placeholder="Email" required>
@@ -90,10 +94,9 @@
                     of
                     uppercase
                     and lowercase letters</p>
-                <button class="reg__form-button button-control" type="submit">
+                <button class="reg__form-button button-control button-shadow-drop-center" type="submit">
                     join now
                     <img src="./img/arrow.png" alt="arrow">
-                    </img>
                 </button>
 
             </form>
@@ -124,11 +127,11 @@
                 <h2 class="subscribe__form-tittle">Subscribe</h2>
                 <p class="subscribe__form-subtittle">for our newletter and promotion</p>
                 <input class="subscribe__form-input" type="email" placeholder="Enter Your Email" required>
-                <button class="subscribe__form-button " type="submit">Subscribe</button>
+                <button class="subscribe__form-button button-shadow-drop-center" type="submit">Subscribe</button>
             </form>
         </div>
         <div class=" copyright ">
-            <div class="copyright__wrapper my-container">
+            <div class="copyright__wrapper shop-container">
                 <h2 class="visually-hidden">copy right</h2>
                 <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
                 <ul class="copyright__social-list">

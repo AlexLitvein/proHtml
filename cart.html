@@ -13,28 +13,36 @@
 
 <body>
     <header class="header">
-        <div class="header__wrapper my-container">
-            <div class="header_controls">
-                <a class="header__logo" href="./index.html"><img src="./img/logo.png" alt="logo" width="44"
-                        height="38"></a>
-                <img src="./img/loupe.svg" alt="loupe" width="26" height="27">
+        <div class="header__wrapper shop-container">
+            <div class="header__controls">
+                <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
+                        alt="logo"></a>
+                <a class="header__loupe-link" href="#">
+                    <!-- <img class="header__loupe" src="./img/loupe.svg" alt="loupe" > -->
+                    <svg class="header__loupe-svg" width="33" height="33" >
+                        <use xlink:href="./img/loupe.svg#loupe" ></use>
+                    </svg>
+                    <input class="header__find" type="search">
+                </a>
             </div>
-            <div class="header_controls">
+            <div class="header__controls">
                 <button class="header__button-menu" type="button">
-                    <img src="./img/menu.svg" alt="" width="32" height="23">
+                    <svg width="32" height="23">
+                        <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
+                    </svg>
                 </button>
                 <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
-                <a class="header__basket" href="#"><img src="./img/basket.svg" alt="basket"></a>
+                <a class="header__basket" href="./cart.html"><img src="./img/basket.svg" alt="basket"></a>
             </div>
         </div>
     </header>
     <nav class="navigation">
         <img class="navigation__button-close" src="./img/close.svg" alt="close">
-        <h2 class="navigation__tittle">menu</h2>
         <ul class="navigation__list">
+            <h2 class="navigation__tittle">menu</h2>
             <li>
-                <h3 class="navigation__item-tittle">man</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">man</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Bags</a>
@@ -42,10 +50,8 @@
                         <a href="#">T-Shirts</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <h3 class="navigation__item-tittle">woman</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">woman</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Jackets & Coats</a>
@@ -54,10 +60,8 @@
                         <a href="#">Shirts</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <h3 class="navigation__item-tittle">kids</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">kids</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Jackets & Coats</a>
@@ -68,14 +72,14 @@
                     </li>
                 </ul>
             </li>
-
         </ul>
     </nav>
-    <main>
+    <main class="cart">
         <section class="cart__tittle">
-            <h1 class="cart__tittle-text my-container">shopping cart</h1>
+            <h1 class="cart__tittle-text shop-container">shopping cart</h1>
         </section>
-        <section class="cart__content my-container">
+        <section class="cart__content shop-container">
+            <h2 class="visually-hidden">cart</h2>
             <div class="cart__list-wrapper">
                 <ul class="cart__list">
                     <li class="cart__item">
@@ -85,7 +89,7 @@
                             <p class="cart__item-tittle">mango people<br>t-shirt</p>
                             <p class="cart__item-price">Price: <span class="cart__item-price_color_pink">$300</span></p>
                             <p class="cart__item-param">Color: Red<br>Size: XL<br>Quantity:<input
-                                    class="cart__item-quantity" type="text" value="2"></input>
+                                    class="cart__item-quantity" type="text" value="2">
                             </p>
                         </div>
                     </li>
@@ -96,7 +100,7 @@
                             <p class="cart__item-tittle">mango people<br>t-shirt</p>
                             <p class="cart__item-price">Price: <span class="cart__item-price_color_pink">$300</span></p>
                             <p class="cart__item-param">Color: Red<br>Size: XL<br>Quantity:<input
-                                    class="cart__item-quantity" type="text" value="2"></input>
+                                    class="cart__item-quantity" type="text" value="2">
                             </p>
                         </div>
                     </li>
@@ -146,7 +150,7 @@
             </form>
         </div>
         <div class=" copyright ">
-            <div class="copyright__wrapper my-container">
+            <div class="copyright__wrapper shop-container">
                 <h2 class="visually-hidden">copy right</h2>
                 <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
                 <ul class="copyright__social-list">

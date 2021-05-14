@@ -11,14 +11,23 @@
 
 <body>
     <header class="header">
-        <div class="header__wrapper my-container">
+        <div class="header__wrapper shop-container">
             <div class="header__controls">
-                <img class="header__logo" src="./img/logo.png" alt="logo" width="44" height="38">
-                <img src="./img/loupe.svg" alt="loupe" width="26" height="27">
+                <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
+                        alt="logo"></a>
+                <a class="header__loupe-link" href="#">
+                    <!-- <img class="header__loupe" src="./img/loupe.svg" alt="loupe" > -->
+                    <svg class="header__loupe-svg" width="33" height="33" >
+                        <use xlink:href="./img/loupe.svg#loupe" ></use>
+                    </svg>
+                    <input class="header__find" type="search">
+                </a>
             </div>
             <div class="header__controls">
                 <button class="header__button-menu" type="button">
-                    <img src="./img/menu.svg" alt="" width="32" height="23">
+                    <svg width="32" height="23">
+                        <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
+                    </svg>
                 </button>
                 <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
                 <a class="header__basket" href="./cart.html"><img src="./img/basket.svg" alt="basket"></a>
@@ -27,11 +36,11 @@
     </header>
     <nav class="navigation">
         <img class="navigation__button-close" src="./img/close.svg" alt="close">
-        <h2 class="navigation__tittle">menu</h2>
         <ul class="navigation__list">
+            <h2 class="navigation__tittle">menu</h2>
             <li>
-                <h3 class="navigation__item-tittle">man</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">man</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Bags</a>
@@ -39,10 +48,8 @@
                         <a href="#">T-Shirts</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <h3 class="navigation__item-tittle">woman</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">woman</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Jackets & Coats</a>
@@ -51,10 +58,8 @@
                         <a href="#">Shirts</a>
                     </li>
                 </ul>
-            </li>
-            <li>
-                <h3 class="navigation__item-tittle">kids</h3>
                 <ul>
+                    <h3 class="navigation__item-tittle">kids</h3>
                     <li class="navigation__item">
                         <a href="#">Accessories</a>
                         <a href="#">Jackets & Coats</a>
@@ -65,11 +70,11 @@
                     </li>
                 </ul>
             </li>
-
         </ul>
     </nav>
     <main>
         <section class="brand">
+            <h2 class="visually-hidden">brand</h2>
             <img class="brand__image" src="./img/big-man.png" alt="big-man" width="800" height="765">
             <div class="brand__tittle-wrapper">
                 <p class="brand__tittle">the brand</p>
@@ -78,7 +83,7 @@
                 </p>
             </div>
         </section>
-        <section class="offers my-container">
+        <section class="offers shop-container">
             <h2 class="visually-hidden">Offers</h2>
             <ul class="offers__list">
                 <li class="offers__item offers__item_women">
@@ -99,7 +104,7 @@
                 </li>
             </ul>
         </section>
-        <section class="product my-container">
+        <section class="product shop-container">
             <div class="product__tittle-wrapper">
                 <h2 class="product__tittle">Featured Items</h2>
                 <p class="product__subtittle">Shop for items based on what we featured in this week</p>
@@ -206,7 +211,7 @@
         </section>
         <section class="advantages">
             <h2 class="visually-hidden">Advantages</h2>
-            <ul class="advantages__list my-container">
+            <ul class="advantages__list shop-container">
                 <li class="advantages__item">
                     <img src="./img/car.svg" alt="car">
                     <h3 class="advantages__tittle">Free Delivery</h3>
@@ -247,7 +252,7 @@
             </form>
         </div>
         <div class=" copyright ">
-            <div class="copyright__wrapper my-container">
+            <div class="copyright__wrapper shop-container">
                 <h2 class="visually-hidden">copy right</h2>
                 <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
                 <ul class="copyright__social-list">

@@ -9,7 +9,10 @@
       }
 
       &__controls {
-        @include media-add ($cont-width){
+        display: flex;
+        align-items: center;
+
+        @include media-add ($shop-cont-w){
           margin-left: 16px;
           margin-right: 16px;
         }
@@ -19,23 +22,76 @@
           margin-right: 8px;
         }
       }
+
+      &__loupe-link {
+        display: flex;
+        fill: $clr-e8;
+      }
+
+      &__loupe-link:hover {
+        fill: $dark-pink;
+        
+      }
+
+      // .slide-fwd-center {
+      //   animation: slide-fwd-center 0.45s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      // }
+
+      &__loupe-svg:hover {
+        animation: slide-fwd-center 0.35s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+
+      
+  @keyframes slide-fwd-center {
+    0% {
+      transform: translateX(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+}
+
+      &__loupe-link:focus-within > input {
+        width: 200px;
+        padding-left: 10px;
+      }
+
+      @keyframes find-grow {
+        from{
+          width: 0;
+        }
+        to{
+          width: 200px;
+          padding-left: 10px;
+        }        
+      }
+
+      &__find {
+        height: 2rem;
+        margin-left: 16px;
+        width: 0px;
+        background-color: $dark-pink;
+        border-radius:6px;
+        border: none;
+        padding: 0;
+        transition: width 500ms, padding-left 500ms;        
+      }
       
       &__button-menu {
         border: none;
         background-color: transparent;
+        margin: 0 25px 0 0;
         cursor: pointer;
+        fill: $clr-e8;
+        transition: fill 300ms;
       }
       
       &__button-menu:hover {
-        opacity: 0.5;
-      }
-      
-      &__logo {
-        margin: 0 41px 0 0;
+        fill: $dark-pink;
       }
       
       &__person-link {
-        margin: 0 42px 0 25px;
+        margin: 0 42px 0 0;
         @include media-add ($mobile-max-sz){
           display: none;
         }
@@ -55,7 +111,7 @@
         text-align: center;
         width: 19px;
         height: 19px;
-        top: -20px;
+        top: -5px;
         right: -8px;
         background-image: url(./../img/basket-circle.png);
       }
