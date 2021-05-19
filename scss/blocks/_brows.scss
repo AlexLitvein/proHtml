@@ -1,21 +1,23 @@
 .brows {
     &__tittle {
-        height: 148px;
         background-color: $light-pink;
+    }  
+
+    &__cookies-list li, a {
+        display: inline;
+        text-decoration: none;
+        color: $gray-5E;
     }
 
-    &__tittle-wrapper {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        @include media-add($mobile-max-sz){
-            flex-direction: column;
-            justify-content: space-around;
-          }
+    &__cookies-list li:last-child a {
+        color: $dark-pink;
+        font-weight: bold;
     }
 
+    &__cookies-list :not(:last-child)::after {
+        content: ' / '; 
+    }  
+    
     &__cookies-text {
         @include font(14px, 17px, 300, 1);
         color: $brown;
@@ -80,7 +82,7 @@
         @include font(14px, 17px, 300);
         margin-top: 48px;
         text-align: center;
-        color: $gray-5;
+        color: $gray-5E;
     }
     &__product-info-price {
         @include font(24px, 29px, 300, 1);
@@ -91,8 +93,7 @@
     &__product-info-hline {
         width: 57%; 
         background-color: $hline;
-        margin-top: 65px;
-        
+        margin-top: 65px;        
     }
 
     &__product-control {
@@ -127,7 +128,7 @@
         width: 211px; 
         margin: 49px 0 65px 0;
         color:$dark-pink;
-        font-family: Lato;
+        font-family: lato-normal;
         @include font();
         line-height: 47px;  
         cursor: pointer;

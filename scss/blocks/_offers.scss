@@ -37,6 +37,7 @@
       
       &__item-subtittle {
         color: $dark-pink;
+        text-align: center;
         @include font(24px, 29px, 700, 1);
       }
       

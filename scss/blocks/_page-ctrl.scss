@@ -1,0 +1,52 @@
+.page-ctrl {
+    $page-ctrl-btn-w: 32px;
+    height: 43px;
+    border: 1px solid #EBEBEB;
+    display: flex;
+    align-items: center;
+    @include font(16px, 19px, 300);
+    color: $gray;
+
+    &__btn {
+        width: $page-ctrl-btn-w;
+        border: none;
+        background: none;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center; 
+        cursor: pointer;
+    }
+
+    &__btn_active {
+        color: $dark-pink;
+    }
+
+    &__btn_gap::after {
+        content: '...';
+        margin-left: 25%;
+    }
+
+    &__btn-prev {
+        background-image: url('./../img/arrow-v.svg');
+        transform: rotate(90deg);
+    }
+
+    &__btn-next {
+        background-image: url('./../img/arrow-v.svg');
+        transform: scale(-1, 1) rotate(90deg);
+
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    &__item {
+        width: $page-ctrl_btn-w; 
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

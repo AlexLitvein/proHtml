@@ -1,16 +1,21 @@
 .subscribe {
     display: flex;
+    align-items: center;
     justify-content: space-around;
     background-image: url(./../img/photo-subscribe.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 90px 0 150px 0;
+    min-height: 450px;
 
     @include media-add($tablet-max-sz) {
       flex-direction: column;
       align-items: center;
-      padding: 65px 0 140px 0;      
+      min-height: 690px;   
       background-position-x: -380px;
+    }  
+
+    @include media-add($mobile-max-sz) {
+      min-height: 550px; 
     }  
   
   &__slogan {
@@ -21,7 +26,9 @@
   &__form {
     text-align: center;
     max-width: 360px;
-    margin: 78px 0 0 0;
+
+    @include media-add($mobile-max-sz) { 
+    } 
   }
   
   &__slogan-text {
@@ -51,6 +58,7 @@
   
   &__form-input {
     border: none;
+    outline: none;
     background-color: #E1E1E1;
     color: $dark-blue;
     height: 50px;
@@ -58,7 +66,7 @@
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     padding: 0 0 0 22px;
-    font-family: Lato;
+    font-family: lato-normal;
     @include font(14px, 50px);
   }
 
@@ -75,7 +83,7 @@
     color: white;
     cursor: pointer;
     @include font(14px, 50px);
-    font-family: Lato;
+    font-family: lato-normal;
   }
   
   &__form-button:hover {

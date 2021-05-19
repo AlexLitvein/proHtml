@@ -1,0 +1,41 @@
+.nav-tittle {
+   
+    height: 148px;
+    background-color: $light-pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $dark-pink;
+    @include font(24px, 29px, 400, 1);
+
+    @include media-add($mobile-max-sz){
+        flex-direction: column;
+        justify-content: space-around;
+    } 
+
+    &__cookies-list li, a {
+        display: inline;
+        text-decoration: none;
+        color: $gray-5E;
+    }
+
+    &__cookies-list li:last-child a {
+        color: $dark-pink;
+        font-weight: bold;
+    }
+
+    &__cookies-list :not(:last-child)::after {
+        content: ' / '; 
+    }  
+
+    &__cookies-text {
+        @include font(14px, 17px, 300, 1);
+        color: $brown;
+    }
+
+    &__cookies-subtext {
+        color: $dark-pink;
+        font-weight: 700;
+    }
+
+}
