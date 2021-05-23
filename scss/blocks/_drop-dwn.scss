@@ -1,0 +1,25 @@
+.drop-dwn {
+    $drop-dwn-h: 32px;
+
+    position: relative;
+    height: $drop-dwn-h;
+    border: none;
+    background: none;
+    @include font(14px, 17px, 400, 1);
+    color: $gray;
+    cursor: pointer; 
+
+    &::after {
+        content: "";
+        background-image: url('./../img/arrow-v.svg');
+        display: inline-block;
+        margin-left: 10px;
+        width: 10px;
+        height: 10px;
+    }
+
+    &:focus > .ppmnu {
+        display: block;
+    }
+
+}

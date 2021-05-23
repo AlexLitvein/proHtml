@@ -1,43 +1,95 @@
 .cart {
     &__tittle {
-        height: 148px;
         background-color: $light-pink;
-        margin: 0 0 96px 0;
-        @include media-add($mobile-max-sz){
-            margin-bottom: 39px;           
-          }
     }
 
-    &__tittle-text {
-        @include font(24px, 29px, 400, 1);
-        line-height: 148px;
-        color: $dark-pink;
-        @include media-add($mobile-max-sz){
-            text-align: center;
-          }
-    }
     &__content {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        @include media-add($tablet-max-sz){
+        justify-content: space-around;
+        margin-top: 96px;
+        margin-bottom: 128px;
+        @include media-add($tablet-max-sz) {
             flex-direction: column;
-            align-items: center;
+            margin-top: 59px;
           }
+        @include media-add($mobile-max-sz) {
+            margin-top: 39px;
+            margin-bottom: 96px;
+        }
     }
 
     &__list-wrapper {
         display: flex;
+        min-width: 552px;
+        min-height: 200px;
         flex-direction: column;
+        @include media-add($tablet-max-sz){
+            margin-bottom: 104px;
+          }
+        
+        @include media-add($mobile-max-sz){
+            min-width: 300px;            
+            margin-bottom: 48px;
+        }
+    }
+
+    &__list {
+        margin-bottom: 32px;
+        @include media-add($tablet-max-sz){
+            margin-bottom: 22px;
+          }
+        
+        @include media-add($mobile-max-sz){
+            margin-bottom: 0;
+        }
+    }
+
+    &__form-wrapper {
+        min-width: 360px;
+        min-height: 200px;
+        display: flex;
+        flex-direction: column;
+        @include media-add($tablet-max-sz){
+            flex-direction: row;
+          }
+        @include media-add($mobile-max-sz){
+            flex-direction: column;
+            margin-bottom: 48px;
+        }
+    }
+
+    &__form {
+        min-height: 200px;
+        min-width: 300px;
+        @include media-add($tablet-max-sz){
+            margin-right: 10px;
+            flex-grow: 1;   
+          }
+
+        @include media-add($mobile-max-sz){
+        margin-right: 0;
+        }
+    }
+
+    &__proceed-wrapper {
+        display: flex;      
+        min-width: 300px;
+        height: 214px;        
+        flex-direction: column;
+        background-color: $light-pink;
+        margin-top: 38px;  
+        padding: 39px 42px 42px 42px;
+        text-align: right;
     }
     
     &__item {
-        width: 652px;
         display: flex;
         box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
-        margin: 0 24px 40px 0;
+        margin-bottom: 40px;
         @include media-add($mobile-max-sz){
-            width: 358px;           
+            width: 358px;  
+            margin-bottom: 30px;         
           }
     }
     
@@ -108,20 +160,13 @@
     &__control-wrapper {
         display: flex;
         justify-content: space-between;
-        margin: 32px 0 128px 0;
-        @include media-add($tablet-max-sz){
-            margin-bottom: 64px;
-          }
-          @include media-add($mobile-max-sz){
-            margin: 0px 0 48px 0;        
-          }
     }
 
     &__button {
         border: 1px solid $gray;
         color: black;
         background-color: white;
-        font-family: Lato;
+        font-family: lato-normal;
         @include font(14px, 17px, 300, 1);
         text-decoration: none;
         text-align: center;
@@ -145,31 +190,11 @@
     &__button-continue {
         width: 234px;
         line-height: 49px;  
-        margin-right: 24px;  
         @include media-add($mobile-max-sz){
             width: 175px; 
             line-height: 32px;           
           }    
-    }
-    &__form-wrapper {
-        @include media-add($tablet-max-sz){
-            display: flex;
-          }
-        @include media-add($mobile-max-sz){
-            flex-direction: column;
-        }
-    }
-
-    &__form {
-        margin: 0 10px 57px 0;
-        @include media-add($tablet-max-sz){
-            margin-bottom: 128px;
-          }
-
-        @include media-add($mobile-max-sz){
-        margin-bottom: 10px;
-        }
-    }
+    } 
 
     &__form-tittle {
         @include font(16px, 19px, 300, 1);
@@ -179,7 +204,7 @@
     &__form-input {
         display: block;   
         box-sizing: border-box;     
-        width: 360px;
+        width: 100%;
         height: 45px;
         margin-top: 20px;
         padding-left: 17px;
@@ -189,7 +214,7 @@
     &__form-input::placeholder {  
         color: $dark-blue;
         @include font(13px, 46px, 300);
-        font-family: Lato;
+        font-family: lato-normal;
         
       }
 
@@ -200,17 +225,7 @@
         margin-top: 24px;
         color: #4A4A4A; 
     }
-    &__proceed-wrapper {
-        display: flex;
-        width: 360px;
-        height: 214px;
-        flex-direction: column;
-        background-color: $light-pink;
-        margin-top: 38px; 
-        margin-bottom: 96px;       
-        padding: 39px 42px 42px 42px;
-        text-align: right;
-    }
+    
     &__proceed-sub {
         @include font(11px, 13px, 400, 1);
         color: $dark-blue;
@@ -239,7 +254,7 @@
         background-color: $dark-pink;
         border: none;  
         @include font(16px, 19px, 300, 1);
-        font-family: Lato;
+        font-family: lato-normal;
         color: white;
         cursor: pointer;
     }

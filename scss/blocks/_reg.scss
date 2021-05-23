@@ -8,21 +8,10 @@
   }
 
 &__tittle {
-    height: 148px;
     background-color: $light-pink;
     margin: 0 0 64px 0;
   }
-  
-  &__tittle-text {
-    @include font(24px, 148px, 400, 1);
-    color: $dark-pink;
-    @include media-add($mobile-max-sz){
-      text-align: center;
-    }
-   
-  }
-  
-  
+    
   &__form {   
     margin: 0 128px 0 0;
     @include media-add($tablet-max-sz){
@@ -42,7 +31,7 @@
     height: 46px;
     margin-top: 20px;
     padding-left: 17px;
-    font-family: Lato;
+    font-family: lato-normal;
 
     transition: transform 0.725s ease;
   }
@@ -54,7 +43,7 @@
   &__form-input::placeholder {  
     color: $gray;
     @include font(13px, 46px, 300);
-    font-family: Lato;
+    font-family: lato-normal;
   }
   
   &__form-gender {
@@ -79,7 +68,7 @@
     background-color: $dark-pink;
     border: none;  
     @include font(14px, 17px, 400, 1);
-    font-family: Lato;
+    font-family: lato-normal;
     color: white;
     cursor: pointer;
   }
@@ -90,6 +79,7 @@
 
   &__offers {
     margin-bottom: 100px;
+    font-family: lato-thin;
   }
   
   &__offers-tittle {
@@ -102,18 +92,18 @@
   }
   
   &__offers-text {
-    @include font(24px, 29px, 300);
+    @include font(24px, 29px);
     color: black;
     margin: 22px 0 22px 0;
     @include media-add($tablet-max-sz){
-      @include font(16px, 19px, 300);
+      @include font(16px, 19px);
     }
   }
   
   &__offers-item {
-    @include font(24px, 29px, 300);
+    @include font(24px, 29px);
     @include media-add($tablet-max-sz){
-      @include font(16px, 19px, 300);
+      @include font(16px, 19px);
     }
     color: black;
     margin: 0 0 16px 43px;

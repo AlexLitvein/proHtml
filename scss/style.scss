@@ -5,12 +5,16 @@
 @import './mixins';
 @import './general';
 
+@import './blocks/product-card';
+@import './blocks/nav-tittle';
+@import './blocks/page-ctrl';
+@import './blocks/drop-dwn';
+@import './blocks/ppmnu';
 
 @import './blocks/header';
 @import './blocks/navigation';
 @import './blocks/brand';
 @import './blocks/copyright';
-@import './blocks/header';
 @import './blocks/offers';
 @import './blocks/product';
 @import './blocks/reg';
@@ -18,3 +22,6 @@
 @import './blocks/advantages';
 @import './blocks/cart';
 @import './blocks/brows';
+@import './blocks/catalog';
+
+

@@ -1,0 +1,73 @@
+.ppmnu {
+    $ppmnu-itm-indent-top: 10px;
+
+    display:none ;
+    position: absolute;
+    background-color: white;
+    padding: 0 16px 20px 34px;
+    width: max-content;
+    right: 0;
+    top: 75px;
+    z-index: 1;
+    text-align: left;
+
+    &__btn-cls {
+        float: right;
+        margin-top: 16px;
+    }
+
+    &__btn-cls:hover {
+        cursor: pointer;
+        transform: translate(1px, 1px);
+    }
+
+    &__ttl {
+        margin: 37px 0 0 0;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__ttl-lst {
+        position: relative;
+        padding: 24px 0 $ppmnu-itm-indent-top 0;
+        text-transform: uppercase;
+        color: $dark-pink;        
+    }
+
+    //  для срабатывания добавлять к элементу аттрибут tabindex="1"
+    &__ttl-lst-anim_enable .ppmnu__ttl-lst:focus-within + ul {
+        max-height: 500px;
+        transition: max-height 1s;
+    }
+
+    &__ttl-lst-anim_enable > ul {
+        max-height: 0;
+    }
+
+    &__ttl-lst::before {
+        content: '';
+        width: 5px;
+        height: 37px;
+        background-color: $dark-pink;
+        bottom: 0;
+        left: -10px;
+        position: absolute;        
+    }
+
+    &__ttl-lst-mark_none .ppmnu__ttl-lst::before {
+        display: none;
+    }
+
+    & > ul {
+        overflow: hidden;
+    }
+
+    & > ul > li {
+        margin: $ppmnu-itm-indent-top 0 0 20px;
+    }
+
+    & > ul > li > a {
+        color: $brown;
+        text-decoration: none;
+    }
+}

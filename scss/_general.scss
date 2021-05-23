@@ -1,5 +1,5 @@
 body {
-    font-family: Lato;
+    font-family: lato-normal;
     @include font();
   }
   
@@ -17,6 +17,11 @@ body {
   .shop-container {
     max-width: $shop-cont-w;
     margin: 0 auto;
+    padding: 0 16px 0 16px;
+
+    @include media-add ($mobile-max-sz){
+      padding: 0 8px 0 8px;
+    }
   }
 
   button-shadow-drop-center:hover {

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/style.css" rel="stylesheet">
-    <title>Shop</title>
+    <title>Catalog</title>
 </head>
 
 <body>
@@ -34,19 +34,19 @@
         </div>
 
         <nav class="ppmnu ppmnu__ttl-lst-mark_none">
-            <img class="ppmnu__btn-cls" src="./img/close.svg" alt="close">
+            <img class="ppmnu__btn-cls " src="./img/close.svg" alt="close">
             <h2 class="ppmnu__ttl">menu</h2>
             <p class="ppmnu__ttl-lst">man</p>
             <ul class="ppmnu__lst">
-                <li><a href="./catalog.html">Accessories</a></li>
-                <li><a href="./catalog.html">Bags</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Bags</a></li>
                 <li><a href="#">Bags</a></li>
                 <li><a href="#">Denim</a></li>
                 <li><a href="#">T-Shirts</a></li>
             </ul>
             <p class="ppmnu__ttl-lst">woman</p>
             <ul class="ppmnu__lst">
-                <li><a href="./catalog.html">Accessories</a></li>
+                <li><a href="#">Accessories</a></li>
                 <li><a href="#">Jackets & Coats</a></li>
                 <li><a href="#">Polos</a></li>
                 <li><a href="#">T-Shirts</a></li>
@@ -54,7 +54,7 @@
             </ul>
             <p class="ppmnu__ttl-lst">kids</p>
             <ul class="ppmnu__lst">
-                <li><a href="./catalog.html">Accessories</a></li>
+                <li><a href="#">Accessories</a></li>
                 <li><a href="#">Jackets & Coats</a></li>
                 <li><a href="#">Polos</a></li>
                 <li><a href="#">T-Shirts</a></li>
@@ -62,45 +62,95 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="brand">
-            <h2 class="visually-hidden">brand</h2>
-            <img class="brand__image" src="./img/big-man.png" alt="big-man" width="800" height="765">
-            <div class="brand__tittle-wrapper">
-                <p class="brand__tittle">the brand</p>
-                <p class="brand__subtittle">luxerious
-                    <span class="brand__subtittle brand__subtittle-color">fashion</span>
-                </p>
+
+
+    <main class="catalog">
+        <section class="brows__tittle ">
+            <div class="nav-tittle shop-container">
+                <h1>new arrivals</h1>
+                <nav class="nav-tittle__cookies-text">
+                    <ul class="nav-tittle__cookies-list">
+                        <li><a href="./index.html">home</a></li>
+                        <li><a href="">men</a></li>
+                        <li><a href="">new arrivals</a></li>
+                    </ul>
+                </nav>
             </div>
         </section>
-        <section class="offers shop-container">
-            <h2 class="visually-hidden">Offers</h2>
-            <ul class="offers__list">
-                <li class="offers__item offers__item_women">
-                    <p>30% off</p>
-                    <h3 class="offers__item-subtittle">for women</h3>
-                </li>
-                <li class="offers__item offers__item_men">
-                    <p>hot deal</p>
-                    <h3 class="offers__item-subtittle">for men</h3>
-                </li>
-                <li class="offers__item offers__item_kids">
-                    <p>new arrivals</p>
-                    <h3 class="offers__item-subtittle">for kids</h3>
-                </li>
-                <li class="offers__item offers__item_accesories">
-                    <p>luxirous & trendy</p>
-                    <h3 class="offers__item-subtittle">accesories</h3>
-                </li>
-            </ul>
-        </section>
-        <section class="product shop-container">
-            <div class="product__tittle-wrapper">
-                <h2 class="product__tittle">Featured Items</h2>
-                <p class="product__subtittle">Shop for items based on what we featured in this week</p>
+
+        <section class="catalog  shop-container">
+
+            <div class="catalog__wrp-sel-ctrl">
+                <div class="catalog__wrp-filter-menu">
+                    <button class="catalog__btn-mnu-ftr" type="button">FILTER
+                        <img src="./img/menu-catalog.svg" alt="#">
+                        <nav class="ppmnu  ppmnu__ttl-lst-anim_enable">
+                            <p class="ppmnu__ttl-lst " tabindex="1">man</p>
+                            <ul class="ppmnu__lst ">
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                            </ul>
+                            <p class="ppmnu__ttl-lst " tabindex="1">woman</p>
+                            <ul class="ppmnu__lst">
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Shirts</a></li>
+                            </ul>
+                            <p class="ppmnu__ttl-lst " tabindex="1">kids</p>
+                            <ul class="ppmnu__lst">
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Jackets & Coats</a></li>
+                                <li><a href="#">Polos</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                                <li><a href="#">Bags</a></li>
+                            </ul>
+                        </nav>
+                    </button>
+                </div>
+
+                <div class="catalog__wrp-filter-dropdown">
+                    <button class="catalog__ddwn-btn drop-dwn " type="button">trending now
+                        <nav class="ppmnu ">
+                            <ul class="ppmnu__lst ">
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                            </ul>
+                        </nav>
+                    </button>
+                    <button class="catalog__ddwn-size catalog__ddwn-btn drop-dwn" type="button">size
+                        <nav class="ppmnu ">
+                            <ul class="ppmnu__lst ">                                
+                                <li><input type="checkbox">xs</li>
+                                <li><input type="checkbox">s</li>
+                                <li><input type="checkbox">m</li>
+                                <li><input type="checkbox">l</li>
+                            </ul>
+                        </nav>
+                    </button>
+                    <button class="catalog__ddwn-btn drop-dwn" type="button">price
+                        <nav class="ppmnu ">
+                            <ul class="ppmnu__lst ">                                
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Bags</a></li>
+                                <li><a href="#">Denim</a></li>
+                                <li><a href="#">T-Shirts</a></li>
+                            </ul>
+                        </nav>
+                    </button>
+                </div>
             </div>
-            <ul class="product__list">
-                <li class="product-card">
+
+            <div class="catalog__grid">
+                <div class="catalog__item product-card">
                     <div class="product-card__image-wrapper">
                         <img src="./img/prod-1.png" alt="pic1">
                         <button class="product-card__button" type="button">
@@ -114,8 +164,8 @@
                             Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                         <p class="product-card__price">$52.00</p>
                     </div>
-                </li>
-                <li class="product-card">
+                </div>
+                <div class="catalog__item product-card">
                     <div class="product-card__image-wrapper">
                         <img src="./img/prod-2.png" alt="pic1">
                         <button class="product-card__button" type="button">
@@ -129,8 +179,8 @@
                             Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                         <p class="product-card__price">$52.00</p>
                     </div>
-                </li>
-                <li class="product-card">
+                </div>
+                <div class="catalog__item product-card">
                     <div class="product-card__image-wrapper">
                         <img src="./img/prod-3.png" alt="pic1">
                         <button class="product-card__button" type="button">
@@ -144,8 +194,8 @@
                             Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                         <p class="product-card__price">$52.00</p>
                     </div>
-                </li>
-                <li class="product-card">
+                </div>
+                <div class="catalog__item product-card">
                     <div class="product-card__image-wrapper">
                         <img src="./img/prod-4.png" alt="pic1">
                         <button class="product-card__button" type="button">
@@ -159,8 +209,8 @@
                             Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                         <p class="product-card__price">$52.00</p>
                     </div>
-                </li>
-                <li class="product-card">
+                </div>
+                <div class="catalog__item product-card">
                     <div class="product-card__image-wrapper">
                         <img src="./img/prod-5.png" alt="pic1">
                         <button class="product-card__button" type="button">
@@ -174,8 +224,8 @@
                             Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                         <p class="product-card__price">$52.00</p>
                     </div>
-                </li>
-                <li class="product-card">
+                </div>
+                <div class="catalog__item product-card">
                     <div class="product-card__image-wrapper">
                         <img src="./img/prod-6.png" alt="pic1">
                         <button class="product-card__button" type="button">
@@ -189,34 +239,68 @@
                             Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                         <p class="product-card__price">$52.00</p>
                     </div>
-                </li>
-            </ul>
-            <a class="product__button-browse " href="./catalog.html">Browse All Product</a>
-        </section>
-        <section class="advantages">
-            <h2 class="visually-hidden">Advantages</h2>
-            <ul class="advantages__list shop-container">
-                <li class="advantages__item">
-                    <img src="./img/car.svg" alt="car">
-                    <h3 class="advantages__tittle">Free Delivery</h3>
-                    <p class="advantages__text">Worldwide delivery on all. Authorit tively morph next-generation
-                        innovation with extensive models.</p>
-                </li>
-                <li class="advantages__item">
-                    <img src="./img/percent.svg" alt="percent">
-                    <h3 class="advantages__tittle">Free Delivery</h3>
-                    <p class="advantages__text">Worldwide delivery on all. Authorit tively morph next-generation innov
-                        tion with extensive
-                        models.</p>
-                </li>
-                <li class="advantages__item">
-                    <img src="./img/crown.svg" alt="crown">
-                    <h3 class="advantages__tittle">Free Delivery</h3>
-                    <p class="advantages__text">Worldwide delivery on all. Authorit tively morph next-generation innov
-                        tion with extensive
-                        models.</p>
-                </li>
-            </ul>
+                </div>
+                <div class="catalog__item product-card">
+                    <div class="product-card__image-wrapper">
+                        <img src="./img/prod-7.jpg" alt="pic1">
+                        <button class="product-card__button" type="button">
+                            <img src="./img/basket.svg" alt="basket">
+                            Add to chart
+                        </button>
+                    </div>
+                    <div class="product-card__description">
+                        <h3 class="product-card__tittle">ellery x m'o capsule</h3>
+                        <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
+                            Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <p class="product-card__price">$52.00</p>
+                    </div>
+                </div>
+                <div class="catalog__item product-card">
+                    <div class="product-card__image-wrapper">
+                        <img src="./img/prod-8.jpg" alt="pic1">
+                        <button class="product-card__button" type="button">
+                            <img src="./img/basket.svg" alt="basket">
+                            Add to chart
+                        </button>
+                    </div>
+                    <div class="product-card__description">
+                        <h3 class="product-card__tittle">ellery x m'o capsule</h3>
+                        <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
+                            Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <p class="product-card__price">$52.00</p>
+                    </div>
+                </div>
+                <div class="catalog__item product-card">
+                    <div class="product-card__image-wrapper">
+                        <img src="./img/prod-9.jpg" alt="pic1">
+                        <button class="product-card__button" type="button">
+                            <img src="./img/basket.svg" alt="basket">
+                            Add to chart
+                        </button>
+                    </div>
+                    <div class="product-card__description">
+                        <h3 class="product-card__tittle">ellery x m'o capsule</h3>
+                        <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
+                            Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                        <p class="product-card__price">$52.00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__wrp-pages-ctrl">
+                <div class="page-ctrl">
+                    <button class="page-ctrl__btn page-ctrl__btn-prev"></button>
+                    <ul class="page-ctrl__list">
+                        <li class="page-ctrl__item page-ctrl__btn_active">1</li>
+                        <li class="page-ctrl__item">2</li>
+                        <li class="page-ctrl__item">3</li>
+                        <li class="page-ctrl__item">4</li>
+                        <li class="page-ctrl__item">5</li>
+                        <li class="page-ctrl__item page-ctrl__btn_gap">6</li>
+                        <li class="page-ctrl__item">20</li>
+                    </ul>
+                    <button class="page-ctrl__btn page-ctrl__btn-next"></button>
+                </div>
+            </div>
         </section>
 
     </main>
