@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Cart</title>
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="header__wrapper shop-container">
+                <div class="header__controls">
+                    <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
+                            alt="logo"></a>
+                    <a class="header__loupe-link" href="#">
+                        <svg class="header__loupe-svg" width="33" height="33">
+                            <use xlink:href="./img/loupe.svg#loupe"></use>
+                        </svg>
+                        <input class="header__find" type="search">
+                    </a>
+                </div>
+                <div class="header__controls">
+                    <button class="header__button-menu" type="button">
+                        <svg width="32" height="23">
+                            <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
+                        </svg>
+                    </button>
+                    <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>                    
+                    <cart_view ref="cartView"></cart_view>
+                </div>
+            </div>
+
+            <nav class="ppmnu ppmnu__ttl-lst-mark_none">
+                <img class="ppmnu__btn-cls" src="./img/close.svg" alt="close">
+                <h2 class="ppmnu__ttl">menu</h2>
+                <p class="ppmnu__ttl-lst">man</p>
+                <ul class="ppmnu__lst">
+                    <li><a href="./catalog.html">Accessories</a></li>
+                    <li><a href="./catalog.html">Bags</a></li>
+                    <li><a href="#">Bags</a></li>
+                    <li><a href="#">Denim</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                </ul>
+                <p class="ppmnu__ttl-lst">woman</p>
+                <ul class="ppmnu__lst">
+                    <li><a href="./catalog.html">Accessories</a></li>
+                    <li><a href="#">Jackets & Coats</a></li>
+                    <li><a href="#">Polos</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Shirts</a></li>
+                </ul>
+                <p class="ppmnu__ttl-lst">kids</p>
+                <ul class="ppmnu__lst">
+                    <li><a href="./catalog.html">Accessories</a></li>
+                    <li><a href="#">Jackets & Coats</a></li>
+                    <li><a href="#">Polos</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Bags</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="cart">
+            <section class="cart__tittle  mnu-offset">
+                <div class="nav-tittle shop-container">
+                    <h1>shopping cart</h1>
+                </div>
+            </section>
+
+            <section class="cart__content shop-container">
+                <h2 class="visually-hidden">cart</h2>
+                <div class="cart__list-wrapper">
+                    <cart ref="cart"></cart>
+                    <div class="cart__control-wrapper">
+                        <button class="cart__button-clear cart__button">Clear shopping cart</button>
+                        <a class="cart__button-continue cart__button" href="./catalog.html">Continue shopping</a>
+                    </div>
+                </div>
+
+                <div class="cart__form-wrapper">
+                    <form class="cart__form" action="endpoint">
+                        <p class="cart__form-tittle">shipping adress</p>
+                        <input class="cart__form-input" type="text" placeholder="Bangladesh" required>
+                        <input class="cart__form-input" type="text" placeholder="State" required>
+                        <input class="cart__form-input" type="text" placeholder="Postcode / Zip" required>
+                        <button class="cart__form-button cart__button" type="button">get a quote</button>
+
+                    </form>
+                    <cart-total ref="cartTotal"></cart-total>
+                </div>
+
+
+            </section>
+        </main>
+        <footer>
+            <div class="subscribe">
+                <h2 class="visually-hidden">subscribe</h2>
+                <div class="subscribe__slogan">
+                    <img src="./img/director.png" alt="director">
+                    <p class="subscribe__slogan-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
+                            class="subscribe__slogan-subtext">a pulvinar purus condimentum“</span></p>
+                </div>
+                <form class="subscribe__form" action="endpoint">
+                    <h2 class="subscribe__form-tittle">Subscribe</h2>
+                    <p class="subscribe__form-subtittle">for our newletter and promotion</p>
+                    <input class="subscribe__form-input" type="email" placeholder="Enter Your Email" required>
+                    <button class="subscribe__form-button button-control" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class=" copyright ">
+                <div class="copyright__wrapper shop-container">
+                    <h2 class="visually-hidden">copy right</h2>
+                    <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
+                    <ul class="copyright__social-list">
+                        <li class="copyright__social-item"><a href="#"><img src="./img/facebook.svg" alt="facebook"></a>
+                        </li>
+                        <li class="copyright__social-item"><a href="#"><img src="./img/whatsapp.svg" alt="whatsapp"></a>
+                        </li>
+                        <li class="copyright__social-item"><a href="#"><img src="./img/pinterest.svg"
+                                    alt="pinterest"></a>
+                        </li>
+                        <li class="copyright__social-item"><a href="#"><img src="./img/twitter.svg" alt="twitter"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>   
+    <script src="./js/CartComponent.js"></script>
+    <script src="./js/ErrorComp.js"></script>
+    <script src="./js/cartView.js"></script>
+    <script src="./js/main.js"></script>
+    <!-- app.js LAST!!!!! -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

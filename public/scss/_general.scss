@@ -1,5 +1,5 @@
 body {
-    font-family: lato-normal;
+    font-family: lato-normal; // 'lato-thin'
     @include font();
   }
   
@@ -22,6 +22,10 @@ body {
     @include media-add ($mobile-max-sz){
       padding: 0 8px 0 8px;
     }
+  }
+
+  .mnu-offset{
+    padding-top: $mnu-offset;  
   }
 
   button-shadow-drop-center:hover {

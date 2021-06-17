@@ -177,7 +177,11 @@
             text-transform: none;    
           }
     }
-    
+
+    &__button:hover {
+        background-color: #e05c6e;
+        color: white;
+    }    
 
     &__button-clear {
         width: 234px;

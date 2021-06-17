@@ -1,5 +1,8 @@
 .header {
     background-color: $dark-blue;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
 
     .ppmnu {
       min-width: 300px;
@@ -90,23 +93,47 @@
       }
       
       &__basket{
-        position: relative;
+        // position: relative;
+        width: 32px;
+        height: 29px;
+        background-image: url(../img/basket.svg);
         @include media-add ($mobile-max-sz){
           display: none;
         }
       }
       
-      &__basket::after{
-        content: '5';
-        position: absolute;
+      // &__basket::after{
+      //   content: '5';
+      //   position: absolute;
+      //   color: white;
+      //   text-align: center;
+      //   width: 19px;
+      //   height: 19px;
+      //   top: -5px;
+      //   right: -8px;
+      //   background-image: url(./../img/basket-circle.png);
+      // } 
+
+      &__basket-count{        
         color: white;
-        text-align: center;
-        width: 19px;
-        height: 19px;
+        position: relative;
+        left: 20px;
         top: -5px;
-        right: -8px;
-        background-image: url(./../img/basket-circle.png);
+        min-width: 19px;
+        display: inline-block;
+        height: 19px;
+        text-align: center;
+        background-image: url(../img/basket-circle.png);
+        
       }
+
+      // &__basket-count-img{        
+      //   width: 19px;
+      //   height: 19px;
+      //   position: absolute;
+      //   z-index: -1;
+      //   background-image: url(../img/basket-circle.png);
+      // }
   }
   
   
