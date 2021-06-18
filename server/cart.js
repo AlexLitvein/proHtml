@@ -1,5 +1,4 @@
 let add = (cart, req) => {
-    req.body.quantity = req.body.quantity || 1;
     let find = cart.find(el => el.id === +req.body.id);
     if (find) {
         find.quantity += req.body.quantity;
@@ -17,14 +16,14 @@ let remove = (cart, req) => {
     return JSON.stringify(cart, null, 4);
 };
 
-let change = (cart, req) => {
-    let find = cart.find(el => el.id_product === +req.params.id);
-    find.quantity += req.body.quantity;
-    return JSON.stringify(cart, null, 4);
-};
+// let change = (cart, req) => {
+//     let find = cart.find(el => el.id_product === +req.params.id);
+//     find.quantity += req.body.quantity;
+//     return JSON.stringify(cart, null, 4);
+// };
 
 module.exports = {
     add,
-    change,
+    // change,
     remove
 };

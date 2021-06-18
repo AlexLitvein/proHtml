@@ -93,7 +93,6 @@
       }
       
       &__basket{
-        // position: relative;
         width: 32px;
         height: 29px;
         background-image: url(../img/basket.svg);
@@ -102,18 +101,6 @@
         }
       }
       
-      // &__basket::after{
-      //   content: '5';
-      //   position: absolute;
-      //   color: white;
-      //   text-align: center;
-      //   width: 19px;
-      //   height: 19px;
-      //   top: -5px;
-      //   right: -8px;
-      //   background-image: url(./../img/basket-circle.png);
-      // } 
-
       &__basket-count{        
         color: white;
         position: relative;
@@ -126,14 +113,6 @@
         background-image: url(../img/basket-circle.png);
         
       }
-
-      // &__basket-count-img{        
-      //   width: 19px;
-      //   height: 19px;
-      //   position: absolute;
-      //   z-index: -1;
-      //   background-image: url(../img/basket-circle.png);
-      // }
   }
   
   

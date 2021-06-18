@@ -17,12 +17,7 @@
                 <div class="header__controls">
                     <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
                             alt="logo"></a>
-                    <a class="header__loupe-link" href="#">
-                        <svg class="header__loupe-svg" width="33" height="33">
-                            <use xlink:href="./img/loupe.svg#loupe"></use>
-                        </svg>
-                        <input class="header__find" type="search">
-                    </a>
+                    <filter-el></filter-el>
                 </div>
                 <div class="header__controls">
                     <button class="header__button-menu" type="button">
@@ -30,7 +25,7 @@
                             <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
                         </svg>
                     </button>
-                    <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>                   
+                    <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
                     <cart_view ref="cartView"></cart_view>
                 </div>
             </div>
@@ -102,7 +97,7 @@
                     <p class="product__subtittle">Shop for items based on what we featured in this week</p>
                 </div>
                 <products ref="products"></products>
-               
+
                 <a class="product__button-browse " href="./catalog.html">Browse All Product</a>
             </section>
             <section class="advantages">
@@ -169,11 +164,13 @@
         </footer>
     </div>
 
-   
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
-    <script src="./js/ProductComponent.js"></script>
-    <script src="./js/ErrorComp.js"></script>    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./js/cartView.js"></script>
+    <script src="./js/FilterComp.js"></script>
+    <script src="./js/ProductComponent.js"></script>
+    <script src="./js/ErrorComp.js"></script>
+
     <script src="./js/main.js"></script>
     <!-- app.js LAST!!!!! -->
     <script src="./js/app.js"></script>

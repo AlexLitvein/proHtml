@@ -8,7 +8,7 @@ Vue.component('cart', {
         }
     },
     mounted() {
-        this.$parent.getJson(this.cartUrl)
+        this.$root.icart.reqData(this.cartUrl)
             .then(data => {
                 for (let item of data) {
                     this.cartItems.push(item);
@@ -18,7 +18,7 @@ Vue.component('cart', {
     },
     methods: {
         updateView() {
-            this.$root.cartCount = this.cartItems.length;
+            this.$root.icart.countCartItem = this.cartItems.length;
             this.totalPrice = this.getTotalPrice();
         },
 
@@ -28,44 +28,28 @@ Vue.component('cart', {
             }, 0);
         },
 
-        addProduct(item) {
-            let find = this.cartItems.find(el => el.id === item.id);
-            if (find) {
-                this.$parent.putJson(`/api/cart/${find.id}`, { quantity: 1 }) // change
-                    .then(data => {
-                        if (data.result === 1) {
-                            find.quantity++
-                        }
-                    })
-            } else {
-                const prod = Object.assign({ quantity: 1 }, item);
-                this.$parent.postJson(`/api/cart`, prod) // add
-                    .then(data => {
-                        if (data.result === 1) {
-                            this.cartItems.push(prod)
-                        }
-                        this.updateView();
-                    })
-            }
-            
-        },
         remove(item) {
-            this.$parent.delJson('/api/cart', item)
-                .then(data => {
-                    if (data.result === 1) {
-                        this.cartItems.splice(this.cartItems.indexOf(item), 1);
-                    }
-                    this.updateView();
-                });
-            
+            this.$root.icart.remove(this.cartItems, item);
+            this.updateView();
+        },
+
+        clear() {
+            this.cartItems = [];
+            this.updateView();
         },
     },
 
     template: `
-    <ul class="cart__list">
-        <cart-item v-for="item of cartItems" :key="item.id" :cart-item="item" @remove="remove">
-        </cart-item>       
-    </ul>
+    <div class="cart__list-wrapper">
+        <ul class="cart__list">
+            <cart-item v-for="item of cartItems" :key="item.id" :cart-item="item">
+            </cart-item>       
+        </ul>
+        <div class="cart__control-wrapper">
+            <button class="cart__button-clear cart__button" @click="clear()">Clear shopping cart</button>
+            <a class="cart__button-continue cart__button" href="./catalog.html">Continue shopping</a>
+        </div>
+    </div> 
     `
 });
 
