@@ -52,10 +52,17 @@ class MyCart {
 const app = new Vue({
     el: '#app',
     data: {
-        icart: new MyCart()
+        mycart: new MyCart()
     },
     methods: {
     },
     mounted() {
+        this.mycart.countProduct();
     }
 });
+
+// export default {
+//     MyCart: MyCart,
+//     app: app   
+//   };
+  

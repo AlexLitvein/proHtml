@@ -14,245 +14,244 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__wrapper shop-container">
-            <div class="header__controls">
-                <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
-                        alt="logo"></a>
-                <a class="header__loupe-link" href="#">
-                    <svg class="header__loupe-svg" width="33" height="33">
-                        <use xlink:href="./img/loupe.svg#loupe"></use>
-                    </svg>
-                    <input class="header__find" type="search">
-                </a>
-            </div>
-            <div class="header__controls">
-                <button class="header__button-menu" type="button">
-                    <svg width="32" height="23">
-                        <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
-                    </svg>
-                </button>
-                <a class="header__person-link" href="./registration.html">
-                    <img src="./img/user.svg" alt="user">
-                </a>
-                <a class="header__basket" href="./cart.html"></a>
-            </div>
-        </div>
-
-        <nav class="ppmnu ppmnu__ttl-lst-mark_none">
-            <img class="ppmnu__btn-cls" src="./img/close.svg" alt="close">
-            <h2 class="ppmnu__ttl">menu</h2>
-            <p class="ppmnu__ttl-lst">man</p>
-            <ul class="ppmnu__lst">
-                <li><a href="./catalog.html">Accessories</a></li>
-                <li><a href="./catalog.html">Bags</a></li>
-                <li><a href="#">Bags</a></li>
-                <li><a href="#">Denim</a></li>
-                <li><a href="#">T-Shirts</a></li>
-            </ul>
-            <p class="ppmnu__ttl-lst">woman</p>
-            <ul class="ppmnu__lst">
-                <li><a href="./catalog.html">Accessories</a></li>
-                <li><a href="#">Jackets & Coats</a></li>
-                <li><a href="#">Polos</a></li>
-                <li><a href="#">T-Shirts</a></li>
-                <li><a href="#">Shirts</a></li>
-            </ul>
-            <p class="ppmnu__ttl-lst">kids</p>
-            <ul class="ppmnu__lst">
-                <li><a href="./catalog.html">Accessories</a></li>
-                <li><a href="#">Jackets & Coats</a></li>
-                <li><a href="#">Polos</a></li>
-                <li><a href="#">T-Shirts</a></li>
-                <li><a href="#">Bags</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="brows">
-        <section class="brows__tittle   mnu-offset">
-            <div class="nav-tittle shop-container">
-                <h1>new arrivals</h1>
-                <nav class="nav-tittle__cookies-text">
-                    <ul class="nav-tittle__cookies-list">
-                        <li><a href="./index.html">home</a></li>
-                        <li><a href="">men</a></li>
-                        <li><a href="">new arrivals</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <section class="brows__slider carousel slide carousel-dark" id="carouselExampleControls"
-            data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="d-flex justify-content-center">
-                        <div class="brows__slider-image-wrapper ">
-                            <img src="./img/browse-1.jpg" class="brows__slider-image d-block width:597px" alt="...">
-                        </div>
-                    </div>
+    <div id="app">
+        <error ref="error"></error>
+        <header class="header">
+            <div class="header__wrapper shop-container">
+                <div class="header__controls">
+                    <a class="header__person-link" href="./index.html"> <img class="header__logo" src="./img/logo.png"
+                            alt="logo"></a>
+                    <filter-el></filter-el>
                 </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="brows__slider-image-wrapper ">
-                            <img src="./img/browse-2.jpg" class="brows__slider-image d-block width:597px" alt="...">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-center">
-                        <div class="brows__slider-image-wrapper ">
-                            <img src="./img/browse-3.jpg" class="brows__slider-image d-block width:597px" alt="...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <i class="brows__slider-arrow fas fa-arrow-left"></i>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <i class="brows__slider-arrow fas fa-arrow-right"></i>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </section>
-
-        <section class="brows__product-panel shop-container">
-            <h2 class="visually-hidden">brows-product</h2>
-            <div class="brows__product-info d-flex flex-column align-items-center">
-                <p class="brows__product-info-tittle">women collection</p>
-                <p class="brows__product-info-name">moschino cheap and chic</p>
-                <p class="brows__product-info-description">Compellingly actualize fully researched processes before
-                    proactive outsourcing. Progressively syndicate
-                    collaborative architectures before cutting-edge services. Completely visualize parallel core
-                    competencies rather than exceptional portals.</p>
-                <p class="brows__product-info-price">$561</p>
-                <hr class="brows__product-info-hline">
-            </div>
-
-            <div class="brows__product-control d-flex flex-column align-items-center">
-                <div class="brows__product-control-menu btn-group ">
-                    <button type="button" class="btn brows__product-control-menu-button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        choose color
+                <div class="header__controls">
+                    <button class="header__button-menu" type="button">
+                        <svg width="32" height="23">
+                            <path d="M0 23V20H32V23H0ZM0 13V10H32V13H0ZM0 3V0H32V3H0Z" />
+                        </svg>
                     </button>
-                    <button type="button" class="btn brows__product-control-menu-button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        choose size
-                    </button>
-                    <button type="button" class="btn brows__product-control-menu-button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        quantity
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
+                    <a class="header__person-link" href="./registration.html"><img src="./img/user.svg" alt="user"></a>
+                    <cart_view ref="cartView"></cart_view>
                 </div>
-                <button class="brows__product-control-button" type="button">
-                    <img class="brows__product-control-button-svg" src="./img/basket.svg" alt="basket" width="26"
-                        height="24">
-                    Add to chart
-                </button>
             </div>
-        </section>
 
-        <section class="product shop-container">
-            <ul class="product__list">
-                <li class="product-card">
-                    <div class="product-card__image-wrapper">
-                        <img src="./img/prod-1.png" alt="pic1">
-                        <button class="product-card__button" type="button">
-                            <img src="./img/basket.svg" alt="basket">
-                            Add to chart
-                        </button>
-                    </div>
-                    <div class="product-card__description">
-                        <h3 class="product-card__tittle">ellery x m'o capsule</h3>
-                        <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
-                            Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product-card__price">$52.00</p>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <div class="product-card__image-wrapper">
-                        <img src="./img/prod-2.png" alt="pic1">
-                        <button class="product-card__button" type="button">
-                            <img src="./img/basket.svg" alt="basket">
-                            Add to chart
-                        </button>
-                    </div>
-                    <div class="product-card__description">
-                        <h3 class="product-card__tittle">ellery x m'o capsule</h3>
-                        <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
-                            Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product-card__price">$52.00</p>
-                    </div>
-                </li>
-                <li class="product-card">
-                    <div class="product-card__image-wrapper">
-                        <img src="./img/prod-3.png" alt="pic1">
-                        <button class="product-card__button" type="button">
-                            <img src="./img/basket.svg" alt="basket">
-                            Add to chart
-                        </button>
-                    </div>
-                    <div class="product-card__description">
-                        <h3 class="product-card__tittle">ellery x m'o capsule</h3>
-                        <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
-                            Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
-                        <p class="product-card__price">$52.00</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <div class="subscribe ">
-            <h2 class="visually-hidden">subscribe</h2>
-            <div class="subscribe__slogan">
-                <img src="./img/director.png" alt="director">
-                <p class="subscribe__slogan-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
-                        class="subscribe__slogan-subtext">a pulvinar purus condimentum“</span></p>
-            </div>
-            <form class="subscribe__form" action="endpoint">
-                <h2 class="subscribe__form-tittle">Subscribe</h2>
-                <p class="subscribe__form-subtittle">for our newletter and promotion</p>
-                <input class="subscribe__form-input" type="email" placeholder="Enter Your Email" required>
-                <button class="subscribe__form-button " type="submit">Subscribe</button>
-            </form>
-        </div>
-        <div class=" copyright ">
-            <div class="copyright__wrapper shop-container">
-                <h2 class="visually-hidden">copy right</h2>
-                <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
-                <ul class="copyright__social-list">
-                    <li class="copyright__social-item"><a href="#"><img src="./img/facebook.svg" alt="facebook"></a>
-                    </li>
-                    <li class="copyright__social-item"><a href="#"><img src="./img/whatsapp.svg" alt="whatsapp"></a>
-                    </li>
-                    <li class="copyright__social-item"><a href="#"><img src="./img/pinterest.svg" alt="pinterest"></a>
-                    </li>
-                    <li class="copyright__social-item"><a href="#"><img src="./img/twitter.svg" alt="twitter"></a></li>
+            <nav class="ppmnu ppmnu__ttl-lst-mark_none">
+                <img class="ppmnu__btn-cls" src="./img/close.svg" alt="close">
+                <h2 class="ppmnu__ttl">menu</h2>
+                <p class="ppmnu__ttl-lst">man</p>
+                <ul class="ppmnu__lst">
+                    <li><a href="./catalog.html">Accessories</a></li>
+                    <li><a href="./catalog.html">Bags</a></li>
+                    <li><a href="#">Bags</a></li>
+                    <li><a href="#">Denim</a></li>
+                    <li><a href="#">T-Shirts</a></li>
                 </ul>
-            </div>
-        </div>
-    </footer>
+                <p class="ppmnu__ttl-lst">woman</p>
+                <ul class="ppmnu__lst">
+                    <li><a href="./catalog.html">Accessories</a></li>
+                    <li><a href="#">Jackets & Coats</a></li>
+                    <li><a href="#">Polos</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Shirts</a></li>
+                </ul>
+                <p class="ppmnu__ttl-lst">kids</p>
+                <ul class="ppmnu__lst">
+                    <li><a href="./catalog.html">Accessories</a></li>
+                    <li><a href="#">Jackets & Coats</a></li>
+                    <li><a href="#">Polos</a></li>
+                    <li><a href="#">T-Shirts</a></li>
+                    <li><a href="#">Bags</a></li>
+                </ul>
+            </nav>
+        </header>
 
+        <main class="brows">
+            <section class="brows__tittle   mnu-offset">
+                <div class="nav-tittle shop-container">
+                    <h1>new arrivals</h1>
+                    <nav class="nav-tittle__cookies-text">
+                        <ul class="nav-tittle__cookies-list">
+                            <li><a href="./index.html">home</a></li>
+                            <li><a href="">men</a></li>
+                            <li><a href="">new arrivals</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="brows__slider carousel slide carousel-dark" id="carouselExampleControls"
+                data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+                            <div class="brows__slider-image-wrapper ">
+                                <img src="./img/browse-1.jpg" class="brows__slider-image d-block width:597px" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="brows__slider-image-wrapper ">
+                                <img src="./img/browse-2.jpg" class="brows__slider-image d-block width:597px" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="brows__slider-image-wrapper ">
+                                <img src="./img/browse-3.jpg" class="brows__slider-image d-block width:597px" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <i class="brows__slider-arrow fas fa-arrow-left"></i>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <i class="brows__slider-arrow fas fa-arrow-right"></i>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </section>
+
+            <section class="brows__product-panel shop-container">
+                <h2 class="visually-hidden">brows-product</h2>
+                <div class="brows__product-info d-flex flex-column align-items-center">
+                    <p class="brows__product-info-tittle">women collection</p>
+                    <p class="brows__product-info-name">moschino cheap and chic</p>
+                    <p class="brows__product-info-description">Compellingly actualize fully researched processes before
+                        proactive outsourcing. Progressively syndicate
+                        collaborative architectures before cutting-edge services. Completely visualize parallel core
+                        competencies rather than exceptional portals.</p>
+                    <p class="brows__product-info-price">$561</p>
+                    <hr class="brows__product-info-hline">
+                </div>
+
+                <div class="brows__product-control d-flex flex-column align-items-center">
+                    <div class="brows__product-control-menu btn-group ">
+                        <button type="button" class="btn brows__product-control-menu-button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            choose color
+                        </button>
+                        <button type="button" class="btn brows__product-control-menu-button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            choose size
+                        </button>
+                        <button type="button" class="btn brows__product-control-menu-button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            quantity
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <button class="brows__product-control-button" type="button">
+                        <img class="brows__product-control-button-svg" src="./img/basket.svg" alt="basket" width="26"
+                            height="24">
+                        Add to chart
+                    </button>
+                </div>
+            </section>
+
+            <section class="product shop-container">
+                <ul class="product__list">
+                    <li class="product-card">
+                        <div class="product-card__image-wrapper">
+                            <img src="./img/prod-1.png" alt="pic1">
+                            <button class="product-card__button" type="button">
+                                <img src="./img/basket.svg" alt="basket">
+                                Add to chart
+                            </button>
+                        </div>
+                        <div class="product-card__description">
+                            <h3 class="product-card__tittle">ellery x m'o capsule</h3>
+                            <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="product-card__price">$52.00</p>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-card__image-wrapper">
+                            <img src="./img/prod-2.png" alt="pic1">
+                            <button class="product-card__button" type="button">
+                                <img src="./img/basket.svg" alt="basket">
+                                Add to chart
+                            </button>
+                        </div>
+                        <div class="product-card__description">
+                            <h3 class="product-card__tittle">ellery x m'o capsule</h3>
+                            <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="product-card__price">$52.00</p>
+                        </div>
+                    </li>
+                    <li class="product-card">
+                        <div class="product-card__image-wrapper">
+                            <img src="./img/prod-3.png" alt="pic1">
+                            <button class="product-card__button" type="button">
+                                <img src="./img/basket.svg" alt="basket">
+                                Add to chart
+                            </button>
+                        </div>
+                        <div class="product-card__description">
+                            <h3 class="product-card__tittle">ellery x m'o capsule</h3>
+                            <p class="product-card__subtittle">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="product-card__price">$52.00</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <div class="subscribe ">
+                <h2 class="visually-hidden">subscribe</h2>
+                <div class="subscribe__slogan">
+                    <img src="./img/director.png" alt="director">
+                    <p class="subscribe__slogan-text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
+                            class="subscribe__slogan-subtext">a pulvinar purus condimentum“</span></p>
+                </div>
+                <form class="subscribe__form" action="endpoint">
+                    <h2 class="subscribe__form-tittle">Subscribe</h2>
+                    <p class="subscribe__form-subtittle">for our newletter and promotion</p>
+                    <input class="subscribe__form-input" type="email" placeholder="Enter Your Email" required>
+                    <button class="subscribe__form-button " type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class=" copyright ">
+                <div class="copyright__wrapper shop-container">
+                    <h2 class="visually-hidden">copy right</h2>
+                    <p class="copyright__text">© 2021 Brand All Rights Reserved.</p>
+                    <ul class="copyright__social-list">
+                        <li class="copyright__social-item"><a href="#"><img src="./img/facebook.svg" alt="facebook"></a>
+                        </li>
+                        <li class="copyright__social-item"><a href="#"><img src="./img/whatsapp.svg" alt="whatsapp"></a>
+                        </li>
+                        <li class="copyright__social-item"><a href="#"><img src="./img/pinterest.svg"
+                                    alt="pinterest"></a>
+                        </li>
+                        <li class="copyright__social-item"><a href="#"><img src="./img/twitter.svg" alt="twitter"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-        crossorigin="anonymous">
-    </script>
-    <!-- app.js LAST!!!!! -->
-    <script src="./js/app.js"></script>
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+        </script>
+    <script src="./js/build.js"></script>
+
 </body>
 
 </html>
