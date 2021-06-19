@@ -8,7 +8,7 @@ Vue.component('cart', {
         }
     },
     mounted() {
-        this.$root.icart.reqData(this.cartUrl)
+        this.$root.mycart.reqData(this.cartUrl)
             .then(data => {
                 for (let item of data) {
                     this.cartItems.push(item);
@@ -18,7 +18,7 @@ Vue.component('cart', {
     },
     methods: {
         updateView() {
-            this.$root.icart.countCartItem = this.cartItems.length;
+            this.$root.mycart.countCartItem = this.cartItems.length;
             this.totalPrice = this.getTotalPrice();
         },
 
@@ -29,7 +29,7 @@ Vue.component('cart', {
         },
 
         remove(item) {
-            this.$root.icart.remove(this.cartItems, item);
+            this.$root.mycart.remove(this.cartItems, item);
             this.updateView();
         },
 

@@ -3,7 +3,7 @@ Vue.component('cart_view', {
         `       
         <a class="header__basket" href="./cart.html">
             <span class="header__basket-count">
-                {{$root.icart.countCartItem}}
+                {{$root.mycart.countCartItem}}
             </span>
         </a> 
     `

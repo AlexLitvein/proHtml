@@ -8,15 +8,13 @@ Vue.component('products', {
         }
     },
     mounted() {
-        this.$root.icart.reqData(this.catalogUrl)
+        this.$root.mycart.reqData(this.catalogUrl)
             .then(data => {
                 for (let item of data) {
                     this.products.push(item);
                     this.filtered.push(item);                    
                 }
-            });
-
-            this.$root.icart.countProduct();
+            });       
     },
     methods: {
         filter(userSearch) {
@@ -43,7 +41,7 @@ Vue.component('product', {
     <li class="product-card">
         <div class="product-card__image-wrapper">
             <img v-bind:src="$parent.imgFolder + product.img" v-bind:alt="product.img">
-            <button class="product-card__button" type="button" @click="$root.icart.addProduct(product)">
+            <button class="product-card__button" type="button" @click="$root.mycart.addProduct(product)">
                 <img src="./img/basket.svg" alt="basket">
                 Add to chart
             </button>
